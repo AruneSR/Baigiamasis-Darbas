@@ -19,6 +19,10 @@ namespace Baigiamasis_Darbas
             IWebDriver driver = new ChromeDriver();
             driver.Url = "https://mumbo.lt/";
 
+            IWebElement acceptAll = driver.FindElement(By.XPath("//*[@id=\'CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll\']"));
+            acceptAll.Click();
+            
+
             IWebElement buttonIconUser = driver.FindElement(By.XPath("/html/body/div[1]/div[2]/header[2]/div/div/div/div/nav/a[1]/div/i"));
             buttonIconUser.Click();
 
@@ -40,11 +44,6 @@ namespace Baigiamasis_Darbas
             driver.Quit();
 
             Assert.AreEqual(expectedResult, actualResult);
-
-
-
-
-
 
 
         }
