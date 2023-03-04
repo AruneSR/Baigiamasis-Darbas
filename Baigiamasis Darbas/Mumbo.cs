@@ -54,7 +54,7 @@ namespace Baigiamasis_Darbas
 
             string valueinputSearch = "pavadeliai";
 
-            IWebElement inputSearch = driver.FindElement(By.XPath("//*[@id='small-search-box-form']"));
+            IWebElement inputSearch = driver.FindElement(By.XPath("//*[@class='yp-header-desktop']//*[contains(@id,'small-search-box-form')]"));
             inputSearch.SendKeys(valueinputSearch);
 
 
@@ -78,10 +78,10 @@ namespace Baigiamasis_Darbas
             IWebElement acceptAll = driver.FindElement(By.XPath("//*[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']"));
             acceptAll.Click();
 
-            IWebElement buttonIconDog = driver.FindElement(By.XPath("//*[@class='fal fa-dog']"));
+            IWebElement buttonIconDog = driver.FindElement(By.XPath("//*[@class='yp-header-desktop']//*[contains(@class,'fal fa-dog')]"));
             buttonIconDog.Click();
 
-            IWebElement buttonGertuves = driver.FindElement(By.XPath("//*[@href='/gertuves-sunims']"));
+            IWebElement buttonGertuves = driver.FindElement(By.XPath("//*[@class='yp-header-desktop']//*[contains(@href,'/gertuves-sunims')]"));
             buttonGertuves.Click();
 
             IWebElement chooseHunterGertuve = driver.FindElement(By.XPath("//*[@class='product product-item product-item-1723']"));
@@ -127,10 +127,10 @@ namespace Baigiamasis_Darbas
             buttonLogin.Click();
 
 
-            IWebElement buttonIconCat = driver.FindElement(By.XPath("//*[@class='fal fa-cat']"));
+            IWebElement buttonIconCat = driver.FindElement(By.XPath("//*[@class='yp-header-desktop']//*[contains(@class,'fal fa-cat')]"));
             buttonIconCat.Click();
 
-            IWebElement buttonGuoliai = driver.FindElement(By.XPath("//*[@href='/guoliai-guoliai-katems']"));
+            IWebElement buttonGuoliai = driver.FindElement(By.XPath("//*[@class='yp-header-desktop']//*[contains(@href,'/guoliai-guoliai-katems')]"));
             buttonGuoliai.Click();
 
 
@@ -138,7 +138,7 @@ namespace Baigiamasis_Darbas
             buttonIconHeart.Click();
 
 
-            IWebElement buttonWishList = driver.FindElement(By.XPath("//*[@class='flaticon-love']"));
+            IWebElement buttonWishList = driver.FindElement(By.XPath("//*[@class='yp-header-desktop']//*[contains(@class,'flaticon-love')]"));
             buttonWishList.Click();
 
 
