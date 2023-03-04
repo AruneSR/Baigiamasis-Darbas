@@ -14,141 +14,182 @@ namespace Baigiamasis_Darbas
         [Test]
         public void LoginFormWithValidUser()
         {
-            
+
             IWebDriver driver = new ChromeDriver();
             driver.Url = "https://mumbo.lt/";
 
-            IWebElement acceptAll = driver.FindElement(By.XPath("//*[@id=\'CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll\']"));
+            IWebElement acceptAll = driver.FindElement(By.XPath("//*[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']"));
             acceptAll.Click();
 
 
-            IWebElement buttonIconUser = driver.FindElement(By.XPath("/html/body/div[2]/div[2]/header[2]/div/div/div/div/nav/a[1]"));
+            IWebElement buttonIconUser = driver.FindElement(By.XPath("//*[@class='yp-header-desktop']//*[contains(@class,'user-controls__login')]"));
             buttonIconUser.Click();
 
             string valueUserEmail = "missarune@gmail.com";
             string valuePassword = "Mumbo2023";
-            
+
             IWebElement inputUserEmail = driver.FindElement(By.XPath("//*[@id='Email']"));
             IWebElement inputPassword = driver.FindElement(By.XPath("//*[@id='Password']"));
-            IWebElement buttonLogin = driver.FindElement(By.XPath("/html/body/div[1]/div[2]/main/div/div/div/div/div[1]/form/button"));
+            IWebElement buttonLogin = driver.FindElement(By.XPath("//*[@type='submit']"));
 
             inputUserEmail.SendKeys(valueUserEmail);
 
             inputPassword.SendKeys(valuePassword);
             buttonLogin.Click();
 
-           
+
             driver.Quit();
-
-           
-
-         }
-       
+        }
 
 
-          public void SearchFieldProducts()
-          {
-            
+        [Test]
 
+        public void SearchFieldProducts()
+        {
             IWebDriver driver = new ChromeDriver();
             driver.Url = "https://mumbo.lt/";
 
-            IWebElement acceptAll = driver.FindElement(By.XPath("//*[@id=\'CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll\']"));
+            IWebElement acceptAll = driver.FindElement(By.XPath("//*[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']"));
             acceptAll.Click();
 
             string valueinputSearch = "pavadeliai";
 
-            IWebElement inputSearch = driver.FindElement(By.XPath("//*[@id='small-searchterms']"));
+            IWebElement inputSearch = driver.FindElement(By.XPath("//*[@id='small-search-box-form']"));
             inputSearch.SendKeys(valueinputSearch);
-
-            //IWebElement ButtonSearch = driver.FindElement(By.XPath("//*[@id=\'small-search-box-form\']/button"));
-            //string actualResult = ButtonSearch.Text;
-
 
 
             driver.Quit();
+        }
 
-            //Assert.AreEqual(expectedResult, actualResult);
-           }
-           [Test]
 
-           public void AddProductToBasket()
-           {
-            //string expectedResult = "productApearInMyBasket";
+
+
+
+
+        [Test]
+
+        public void AddProductToBasket()
+        {
+
 
             IWebDriver driver = new ChromeDriver();
             driver.Url = "https://mumbo.lt/";
 
-            IWebElement acceptAll = driver.FindElement(By.XPath("//*[@id=\'CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll\']"));
+            IWebElement acceptAll = driver.FindElement(By.XPath("//*[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']"));
             acceptAll.Click();
 
-            IWebElement buttonSunys = driver.FindElement(By.XPath("/html/body/div[1]/div[2]/header[2]/div/div/div/nav/ul[1]/li[1]/a/i"));
-            buttonSunys.Click();
+            IWebElement buttonIconDog = driver.FindElement(By.XPath("//*[@class='fal fa-dog']"));
+            buttonIconDog.Click();
 
-            IWebElement buttonGertuves = driver.FindElement(By.XPath("/html/body/div[1]/div[2]/header[2]/div/div/div/nav/ul[1]/li[1]/a/i"));
+            IWebElement buttonGertuves = driver.FindElement(By.XPath("//*[@href='/gertuves-sunims']"));
             buttonGertuves.Click();
 
-            IWebElement chooseHunterGertuve = driver.FindElement(By.XPath("/html/body/div[1]/div[2]/header[2]/div/div/div/nav/ul[1]/li[1]/a/i"));
+            IWebElement chooseHunterGertuve = driver.FindElement(By.XPath("//*[@class='product product-item product-item-1723']"));
             chooseHunterGertuve.Click();
 
-            IWebElement addToCart = driver.FindElement(By.XPath("//*[@id=\"addToCart\"]"));
+            IWebElement addToCart = driver.FindElement(By.XPath("//*[@id='addToCart']"));
             addToCart.Click();
 
-            //IWebElement buttonMyBasket = driver.FindElement(By.XPath("/html/body/div[1]/div[2]/header[2]/div/div/div/div/nav/a[3]/div[2]"));
-            //string actualResult = buttonMyBasket.Text;
+
 
             driver.Quit();
 
-            //Assert.AreEqual(expectedResult, actualResult);
-
-           }
-
-             [Test]
-             public void AddNewDogToMyPetsInfo()
-             {
-                //string expectedResult = "";
-
-                    IWebDriver driver = new ChromeDriver();
-                    driver.Url = "https://mumbo.lt/";
-
-                    IWebElement acceptAll = driver.FindElement(By.XPath("//*[@id=\'CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll\']"));
-                    acceptAll.Click();
-
-                    IWebElement buttonIconUser = driver.FindElement(By.XPath("/html/body/div[1]/div[2]/header[2]/div/div/div/div/nav/a[1]/div/i"));
-                    buttonIconUser.Click();
-
-                    string valueUserEmail = "missarune@gmail.com";
-                    string valuePassword = "Mumbo2023";
-
-                    IWebElement inputUserEmail = driver.FindElement(By.XPath("//*[@id=\"Email\"]"));
-                    IWebElement inputPassword = driver.FindElement(By.XPath("//*[@id='Password']"));
-                    IWebElement buttonLogin = driver.FindElement(By.XPath("/html/body/div[1]/div[2]/main/div/div/div/div/div[1]/form/button"));
-
-                    inputUserEmail.SendKeys(valueUserEmail);
-
-                    inputPassword.SendKeys(valuePassword);
-                    buttonLogin.Click();
 
 
-                    IWebElement IconVartotojoPaskyra = driver.FindElement(By.XPath("/html/body/div[1]/div[2]/header[2]/div/div/div/div/nav/a[1]/div/i"));
-                    IconVartotojoPaskyra.Click();
-
-                    IWebElement buttonMyPets = driver.FindElement(By.XPath("/html/body/div[1]/div[2]/main/div/div/div[1]/div[1]/a[7]"));
-                    buttonMyPets.Click();
-
-                    IWebElement AddNewPet = driver.FindElement(By.XPath("/html/body/div[1]/div[2]/main/div/div/div[2]/div/div[1]/button"));
-                    AddNewPet.Click();
-
-                    string PetName = "Amigo";
-                    string PetBreed = "Vilkas";
+        }
 
 
-                   
-                    driver.Quit();
 
-                     
-             }
-          
-            
+        [Test]
+        public void AddProductToWishList()
+        {
+
+
+            IWebDriver driver = new ChromeDriver();
+            driver.Url = "https://mumbo.lt/";
+
+            IWebElement acceptAll = driver.FindElement(By.XPath("//*[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']"));
+            acceptAll.Click();
+
+            IWebElement buttonIconUser = driver.FindElement(By.XPath("//*[@class='yp-header-desktop']//*[contains(@class,'user-controls__login')"));
+            buttonIconUser.Click();
+
+            string valueUserEmail = "missarune@gmail.com";
+            string valuePassword = "Mumbo2023";
+
+            IWebElement inputUserEmail = driver.FindElement(By.XPath("//*[@id='Email']"));
+            IWebElement inputPassword = driver.FindElement(By.XPath("//*[@id='Password']"));
+            IWebElement buttonLogin = driver.FindElement(By.XPath("//*[@type='submit']"));
+
+            inputUserEmail.SendKeys(valueUserEmail);
+
+            inputPassword.SendKeys(valuePassword);
+            buttonLogin.Click();
+
+
+            IWebElement buttonIconCat = driver.FindElement(By.XPath("//*[@class='fal fa-cat']"));
+            buttonIconCat.Click();
+
+            IWebElement buttonGuoliai = driver.FindElement(By.XPath("//*[@href='/guoliai-guoliai-katems']"));
+            buttonGuoliai.Click();
+
+
+            IWebElement buttonIconHeart = driver.FindElement(By.XPath("//*[@class='fas fa-heart']"));
+            buttonIconHeart.Click();
+
+
+            IWebElement buttonWishList = driver.FindElement(By.XPath("//*[@class='flaticon-love']"));
+            buttonWishList.Click();
+
+
+
+            driver.Quit();
+
+
+        }
+        [Test]
+        public void AddNewDogToMyPetsInfo()
+        {
+
+
+            IWebDriver driver = new ChromeDriver();
+            driver.Url = "https://mumbo.lt/";
+
+            IWebElement acceptAll = driver.FindElement(By.XPath("//*[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']"));
+            acceptAll.Click();
+
+            IWebElement buttonIconUser = driver.FindElement(By.XPath("//*[@class='yp-header-desktop']//*[contains(@class,'user-controls__login')]"));
+            buttonIconUser.Click();
+
+            string valueUserEmail = "missarune@gmail.com";
+            string valuePassword = "Mumbo2023";
+
+            IWebElement inputUserEmail = driver.FindElement(By.XPath("//*[@id='Email']"));
+            IWebElement inputPassword = driver.FindElement(By.XPath("//*[@id='Password']"));
+            IWebElement buttonLogin = driver.FindElement(By.XPath("//*[@type='submit']"));
+
+            inputUserEmail.SendKeys(valueUserEmail);
+
+            inputPassword.SendKeys(valuePassword);
+            buttonLogin.Click();
+
+
+            IWebElement IconVartotojoPaskyra = driver.FindElement(By.XPath("//*[@class='yp-header-desktop']//*[contains(@class,'flaticon-user')]"));
+            IconVartotojoPaskyra.Click();
+
+            IWebElement buttonMyPets = driver.FindElement(By.XPath("//*[@href='/customer/pets']"));
+            buttonMyPets.Click();
+
+            IWebElement AddNewPet = driver.FindElement(By.XPath("/html/body/div[1]/div[2]/main/div/div/div[2]/div/div[1]/button"));
+            AddNewPet.Click();
+
+            string PetName = "Amigo";
+            string PetBreed = "Vilkas";
+
+
+
+            driver.Quit();
+
+        }
     }
-}
+}       
