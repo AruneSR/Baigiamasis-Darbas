@@ -69,7 +69,7 @@ namespace Baigiamasis_Darbas
             IWebElement Search = driver.FindElement(By.XPath("//*[@class='yp-header-desktop']//*[@id='small-searchterms']"));
             Search.Click();
             System.Threading.Thread.Sleep(2000);
-            IWebElement inputSearch = driver.FindElement(By.XPath("//*[@action='/search']//*[@class='search-prediction']")); 
+            IWebElement inputSearch = driver.FindElement(By.XPath("//*[@class='yp-header-desktop']//*[@action='/search']//*[@class='search-prediction']")); 
             inputSearch.SendKeys(valueinputSearch);                                           //*[@action='/search']//*[@type='search']
             System.Threading.Thread.Sleep(2000);
             IWebElement buttonSearch = driver.FindElement(By.XPath("//*[@class='yp-header-desktop']//*[@id='small-search-box-form']/button"));
