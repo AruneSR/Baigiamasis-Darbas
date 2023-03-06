@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -216,11 +217,35 @@ namespace Baigiamasis_Darbas
             buttonManoAugintiniai.Click();
             System.Threading.Thread.Sleep(2000);
 
-            IWebElement PridetiNaujaAugintini = driver.FindElement(By.XPath("/html/body/div[1]/div[2]/main/div/div/div[2]/div/div[1]/button"));
+            IWebElement PridetiNaujaAugintini = driver.FindElement(By.XPath("//*[@class='account__content']//*[@type='button']"));
             PridetiNaujaAugintini.Click();
             
             string augintinioVardas = "Amigo";
-            string augintinioVeiles = "Vilkas";
+            string augintinioVeisle = "Vilkas";
+
+            IWebElement inputAugintinioVardas = driver.FindElement(By.XPath("//*[@id='Pet_Name']"));
+            System.Threading.Thread.Sleep(2000);
+            inputAugintinioVardas.SendKeys(augintinioVardas);
+            System.Threading.Thread.Sleep(2000);
+            IWebElement inputAugintinioVeisle = driver.FindElement(By.XPath("//*[@id='Pet_Breed']"));
+            inputAugintinioVeisle.SendKeys(augintinioVeisle);
+
+            string expectedGimimoDiena = "3";
+            string expectedGimimoMenuo = "11";
+            string expectedGimimoMetai = "2019";
+            string expectedRusis = "Suo";
+
+
+
+
+            SelectElement selectAugintinioGimimoDiena = SelectElement.(By.XPath("//*[@class='date-picker-wrapper']//*[@value='3']"));
+            selectAugintinioGimimoDiena.SelectByValue(expectedGimimoDiena);
+
+            IWebElement selectAugintiniorusys = driver.FindElement(By.XPath("//*[@id='Pet_PetSpecies']/option[1]"));
+
+
+
+
 
 
 
