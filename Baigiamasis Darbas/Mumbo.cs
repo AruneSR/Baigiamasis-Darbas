@@ -7,11 +7,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Baigiamasis_Darbas
 {
     internal class Mumbo
     {
+        private object clickAugintinioVardoLaukeli;
+
         [Test]
         public void LoginFormWithValidUser()
         {
@@ -69,7 +72,7 @@ namespace Baigiamasis_Darbas
             IWebElement Search = driver.FindElement(By.XPath("//*[@class='yp-header-desktop']//*[@id='small-searchterms']"));
             Search.Click();
             System.Threading.Thread.Sleep(2000);
-            IWebElement inputSearch = driver.FindElement(By.XPath("//*[@class='yp-header-desktop']//*[@action='/search']//*[@class='search-prediction']")); 
+            IWebElement inputSearch = driver.FindElement(By.XPath("//*[@class='yp-header-desktop']//*[@id='small-searchterms']")); 
             inputSearch.SendKeys(valueinputSearch);                                           //*[@action='/search']//*[@type='search']
             System.Threading.Thread.Sleep(2000);
             IWebElement buttonSearch = driver.FindElement(By.XPath("//*[@class='yp-header-desktop']//*[@id='small-search-box-form']/button"));
@@ -219,29 +222,47 @@ namespace Baigiamasis_Darbas
 
             IWebElement PridetiNaujaAugintini = driver.FindElement(By.XPath("//*[@class='account__content']//*[@type='button']"));
             PridetiNaujaAugintini.Click();
-            
+            System.Threading.Thread.Sleep(2000);
             string augintinioVardas = "Amigo";
             string augintinioVeisle = "Vilkas";
 
-            IWebElement inputAugintinioVardas = driver.FindElement(By.XPath("//*[@id='Pet_Name']"));
+            IWebElement paspaustiAugintionVardoLauka = driver.FindElement(By.XPath("//*[@name='Pet.Name']"));
+            paspaustiAugintionVardoLauka.Click();
+
+            IWebElement inputAugintinioVardas = driver.FindElement(By.XPath("//*[@name='Pet.Name']"));
             System.Threading.Thread.Sleep(2000);
             inputAugintinioVardas.SendKeys(augintinioVardas);
             System.Threading.Thread.Sleep(2000);
+
+            IWebElement paspaustiAugintinioVeislesLauka = driver.FindElement(By.XPath("//*[@id='Pet_Breed']"));
+            paspaustiAugintinioVeislesLauka.Click();
+
+
             IWebElement inputAugintinioVeisle = driver.FindElement(By.XPath("//*[@id='Pet_Breed']"));
             inputAugintinioVeisle.SendKeys(augintinioVeisle);
 
+            System.Threading.Thread.Sleep(2000);
+            string expectedRusis = "Suo";
             string expectedGimimoDiena = "3";
             string expectedGimimoMenuo = "11";
             string expectedGimimoMetai = "2019";
-            string expectedRusis = "Suo";
+           
+
+            //IWebElement element = driver.FindElement(...).
+            //SelectElement tipo elementą: SelectElement selectElement = new SelectElement(element).
+
+            IWebElement fieldAugintinioRusis = driver.FindElement(By.XPath("//*[@id='Pet_PetSpecies']"));
+            fieldAugintinioRusis.Click();
+
+            System.Threading.Thread.Sleep(2000);
+            IWebElement selectAugintiniorusis = driver.FindElement(By.XPath("//*[@id='Pet_PetSpecies']//*[@value='Dog']"));
+            SelectElement selectRusis = new SelectElement(selectAugintiniorusis);
+
+            
+           
 
 
-
-
-            SelectElement selectAugintinioGimimoDiena = SelectElement.(By.XPath("//*[@class='date-picker-wrapper']//*[@value='3']"));
-            selectAugintinioGimimoDiena.SelectByValue(expectedGimimoDiena);
-
-            IWebElement selectAugintiniorusys = driver.FindElement(By.XPath("//*[@id='Pet_PetSpecies']/option[1]"));
+          
 
 
 
