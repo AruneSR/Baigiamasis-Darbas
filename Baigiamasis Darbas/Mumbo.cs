@@ -13,7 +13,7 @@ namespace Baigiamasis_Darbas
 {
     internal class Mumbo
     {
-        private object clickAugintinioVardoLaukeli;
+       
 
         [Test]
         public void LoginFormWithValidUser()
