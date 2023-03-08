@@ -22,8 +22,9 @@ namespace Tests
             System.Threading.Thread.Sleep(2000);
             MumboPage.ClickButtonIconUser();
             System.Threading.Thread.Sleep(2000);
-            string valueUserPassword = "Mumbo2023";
+           
             string valueUserEmail = "missarune@gmail.com";
+            string valueUserPassword = "Mumbo2023";
             MumboPage.ClickButtonUserEmail();
             System.Threading.Thread.Sleep(2000);
             MumboPage.EnterValueUserEmail(valueUserEmail);

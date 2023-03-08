@@ -14,7 +14,7 @@ namespace Framework.POM
 
             string locator = "//*[@class='yp-header-desktop']//*[contains(@class,'user-controls__login')]";
             Common.ClickElement(locator);
-            System.Threading.Thread.Sleep(2000);
+           
 
         }
 
@@ -22,7 +22,7 @@ namespace Framework.POM
         {
             string locator = "//*[@action='/loginform']//*[@type='submit']";
             Common.ClickElement(locator);
-            System.Threading.Thread.Sleep(2000);
+            
 
         }
 
@@ -51,7 +51,7 @@ namespace Framework.POM
            
             string locator = "//*[@id='Email']";
             Common.SendKeys(valueUserEmail, locator);
-            System.Threading.Thread.Sleep(2000);
+           
         }
 
         public static void EnterValueUserPassword(string valueUserPassword)
