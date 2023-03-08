@@ -10,18 +10,20 @@ namespace Framework.POM
 
         internal static IWebElement GetElement(string locator)
         {
+            System.Threading.Thread.Sleep(2000);
             return Driver.GetDriver().FindElement(By.XPath(locator));
             
         }
         internal static void ClickElement(string locator)
         {
-            
+            System.Threading.Thread.Sleep(2000);
             GetElement(locator).Click();
             
         }
 
-        internal static void SendKeys(string locator ,string keys)
+        internal static void SendKeys(string keys,string locator)
         {
+            System.Threading.Thread.Sleep(2000);
             Driver.GetDriver().FindElement(By.XPath(locator)).SendKeys(keys);
            
         }
