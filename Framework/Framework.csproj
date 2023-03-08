@@ -53,6 +53,7 @@
     <Compile Include="Driver.cs" />
     <Compile Include="POM\Common.cs" />
     <Compile Include="POM\MumboPage.cs" />
+    <Compile Include="POM\SearchFieldProduct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
