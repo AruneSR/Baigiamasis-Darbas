@@ -12,7 +12,8 @@ namespace Tests
     {
         [Test]
         public void LoginFormWithValidUser()
-        
+        {
+
             Driver.OpenUrl("https://mumbo.lt/");
 
             IWebDriver driver = new ChromeDriver();
@@ -48,13 +49,6 @@ namespace Tests
 
             driver.Quit();
         }
-    }
+    }    }
 
-    internal class Common
-    {
-        internal static void OpenUrl(string v)
-        {
-            throw new NotImplementedException();
-        }
-    }
-}
+  

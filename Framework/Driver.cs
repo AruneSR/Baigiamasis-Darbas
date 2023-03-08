@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace Framework
 {
-    internal class Driver
+    public class Driver
     {
-        private static IWebDriver driver;
-        public static void SetupDriver()
+        public static IWebDriver driver;
+        private static void SetupDriver()
         {
             driver = new ChromeDriver();
         }
