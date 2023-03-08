@@ -242,28 +242,22 @@ namespace Baigiamasis_Darbas
             inputAugintinioVeisle.SendKeys(augintinioVeisle);
 
             System.Threading.Thread.Sleep(2000);
-            string expectedRusis = "Suo";
+            string expectedRusis = "Dog";
             string expectedGimimoDiena = "3";
             string expectedGimimoMenuo = "11";
             string expectedGimimoMetai = "2019";
-           
+
 
             //IWebElement element = driver.FindElement(...).
             //SelectElement tipo elementą: SelectElement selectElement = new SelectElement(element).
 
-            IWebElement fieldAugintinioRusis = driver.FindElement(By.XPath("//*[@id='Pet_PetSpecies']"));
-            fieldAugintinioRusis.Click();
+            //IWebElement fieldAugintinioRusis = driver.FindElement(By.XPath("//*[@id='Pet_PetSpecies']"));
+            //fieldAugintinioRusis.Click();
 
             System.Threading.Thread.Sleep(2000);
-            IWebElement selectAugintiniorusis = driver.FindElement(By.XPath("//*[@id='Pet_PetSpecies']//*[@value='Dog']"));
-            SelectElement selectRusis = new SelectElement(selectAugintiniorusis);
-
-            
-           
-
-
-          
-
+            IWebElement fieldAugintinioRusis = driver.FindElement(By.XPath("//*[@id='Pet_PetSpecies']//*[@value='Dog']"));
+            SelectElement selectRusis = new SelectElement(fieldAugintinioRusis);
+            selectRusis.SelectByValue("Dog");
 
 
 

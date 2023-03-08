@@ -1,4 +1,6 @@
-﻿using NUnit.Framework;
+﻿using Framework;
+using Framework.POM;
+using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,41 +15,25 @@ namespace Tests
         [Test]
         public void LoginFormWithValidUser()
         {
-
+            
+            Driver.SetupDriver();
             Driver.OpenUrl("https://mumbo.lt/");
-
-            IWebDriver driver = new ChromeDriver();
-            driver.Manage().Window.Maximize();
-            driver.Url = "https://mumbo.lt/";
-
-            IWebElement acceptAll = driver.FindElement(By.XPath("//*[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']"));
-            acceptAll.Click();
+            MumboPage.ClickCookiesAllaccept();
             System.Threading.Thread.Sleep(2000);
-
-
-            IWebElement buttonIconUser = driver.FindElement(By.XPath("//*[@class='yp-header-desktop']//*[contains(@class,'user-controls__login')]"));
-            buttonIconUser.Click();
-
+            MumboPage.ClickButtonIconUser();
+            System.Threading.Thread.Sleep(2000);
+            string valueUserPassword = "Mumbo2023";
             string valueUserEmail = "missarune@gmail.com";
-            string valuePassword = "Mumbo2023";
+            MumboPage.ClickButtonUserEmail();
             System.Threading.Thread.Sleep(2000);
-
-            IWebElement inputUserEmail = driver.FindElement(By.XPath("//*[@id='Email']"));
+            MumboPage.EnterValueUserEmail(valueUserEmail);
             System.Threading.Thread.Sleep(2000);
-            IWebElement inputPassword = driver.FindElement(By.XPath("//*[@id='Password']"));
-            System.Threading.Thread.Sleep(3000);
-            IWebElement buttonLogin = driver.FindElement(By.XPath("//*[@action='/loginform']//*[@type='submit']"));
+            MumboPage.ClickButtonUserPassword();
             System.Threading.Thread.Sleep(2000);
+            MumboPage.EnterValueUserPassword(valueUserPassword);
+            MumboPage.ClickButtonLogin();
+            Driver.QuitDriver();
 
-            inputUserEmail.SendKeys(valueUserEmail);
-            System.Threading.Thread.Sleep(2000);
-
-
-            inputPassword.SendKeys(valuePassword);
-            buttonLogin.Click();
-
-
-            driver.Quit();
         }
     }    }
 
