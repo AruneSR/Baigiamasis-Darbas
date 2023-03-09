@@ -14,8 +14,6 @@ namespace Framework.POM
             string locator = "//*[@class='yp-header-desktop']//*[@id='small-search-box-form']/button";
             Common.ClickElement(locator);
 
-
-
         }
 
         public static void EntervalueinputSearch(string valueinputSearch)

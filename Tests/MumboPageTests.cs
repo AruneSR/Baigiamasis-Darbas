@@ -30,6 +30,6 @@ namespace Tests
             Driver.QuitDriver();
 
         }
-    }    }
+}   }
 
   
