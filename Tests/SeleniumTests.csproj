@@ -52,6 +52,9 @@
     <Compile Include="MumboPageTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SearchFieldProductsTests.cs" />
+    <Compile Include="SelectMenu.cs" />
+    <Compile Include="UserAccountTests.cs" />
+    <Compile Include="WishlistTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

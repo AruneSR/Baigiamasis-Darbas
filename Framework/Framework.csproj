@@ -55,6 +55,8 @@
     <Compile Include="POM\Common.cs" />
     <Compile Include="POM\MumboPage.cs" />
     <Compile Include="POM\SearchFieldProduct.cs" />
+    <Compile Include="POM\UserAccount.cs" />
+    <Compile Include="POM\Wishlist.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

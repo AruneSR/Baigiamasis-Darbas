@@ -10,7 +10,7 @@ namespace Framework.POM
 
         internal static IWebElement GetElement(string locator)
         {
-            System.Threading.Thread.Sleep(2000);
+         
             return Driver.GetDriver().FindElement(By.XPath(locator));
             
         }
