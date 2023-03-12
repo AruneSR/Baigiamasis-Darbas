@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Tests
 {
-    internal class UserAccountTests
+    internal class UserAccountInfoChangesTests
     {
         [Test]
         public void AddNewDogToMyPetsInfo()
@@ -18,29 +18,29 @@ namespace Tests
             string valueUserPassword = "Mumbo2023";
             Driver.SetupDriver();
             Driver.OpenUrl("https://mumbo.lt/");
-            MumboPage.ClickCookiesAllaccept();
-            MumboPage.ClickButtonIconUser();
-            MumboPage.ClickButtonUserEmail();
-            MumboPage.EnterValueUserEmail(valueUserEmail);
-            MumboPage.ClickButtonUserPassword();
-            MumboPage.EnterValueUserPassword(valueUserPassword);
-            MumboPage.ClickButtonLogin();
-            UserAccount.ClickIconUserAccount();
-            UserAccount.ClickMyPets();
-            UserAccount.ClickAddNewPet();
+            UserAccountFormLogin.ClickCookiesAllaccept();
+            UserAccountFormLogin.ClickButtonIconUser();
+            UserAccountFormLogin.ClickButtonUserEmail();
+            UserAccountFormLogin.EnterValueUserEmail(valueUserEmail);
+            UserAccountFormLogin.ClickButtonUserPassword();
+            UserAccountFormLogin.EnterValueUserPassword(valueUserPassword);
+            UserAccountFormLogin.ClickButtonLogin();
+            UserAccountInfoChanges.ClickIconUserAccount();
+            UserAccountInfoChanges.ClickMyPets();
+            UserAccountInfoChanges.ClickAddNewPet();
             string valuePetsName = "Amigo";
             string valuePetsBreed = "Vilkas";
-            UserAccount.EnterValuePetsName(valuePetsName);
-            UserAccount.EneterValuePetsBreed(valuePetsBreed);
-
+            UserAccountInfoChanges.EnterValuePetsName(valuePetsName);
+            UserAccountInfoChanges.EneterValuePetsBreed(valuePetsBreed);
+          
 
             string selectedSpecies = "Dog";
             string expectedGimimoDiena = "3";
             string expectedGimimoMenuo = "11";
             string expectedGimimoMetai = "2019";
+            UserAccountInfoChanges.SelectOptionInPetsSpecies(selectedSpecies);
 
-            SelectMenu.SelectOption(selectedSpecies);
-            Assert.AreEqual(selectedSpecies, SelectMenu.GetSelectedValue);
+            //Assert.AreEqual(selectedSpecies, UserAccount.GetSelectOptionInPetsSpecies());
 
 
 

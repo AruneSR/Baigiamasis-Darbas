@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Tests
 {
-    internal class MumboPageTests
+    internal class UserAccountFormLoginTests
     {
         [Test]
         public void LoginFormWithValidUser()
@@ -20,13 +20,13 @@ namespace Tests
 
             Driver.SetupDriver();
             Driver.OpenUrl("https://mumbo.lt/");
-            MumboPage.ClickCookiesAllaccept();
-            MumboPage.ClickButtonIconUser();
-            MumboPage.ClickButtonUserEmail();  
-            MumboPage.EnterValueUserEmail(valueUserEmail);  
-            MumboPage.ClickButtonUserPassword();
-            MumboPage.EnterValueUserPassword(valueUserPassword);
-            MumboPage.ClickButtonLogin();
+            UserAccountFormLogin.ClickCookiesAllaccept();
+            UserAccountFormLogin.ClickButtonIconUser();
+            UserAccountFormLogin.ClickButtonUserEmail();  
+            UserAccountFormLogin.EnterValueUserEmail(valueUserEmail);  
+            UserAccountFormLogin.ClickButtonUserPassword();
+            UserAccountFormLogin.EnterValueUserPassword(valueUserPassword);
+            UserAccountFormLogin.ClickButtonLogin();
             Driver.QuitDriver();
 
         }

@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Framework.POM
 {
-    public class UserAccount
+    public class UserAccountInfoChanges
     {
+        public static double GetSelectedValue { get; set; }
+
         public static void ClickAddNewPet()
         {
             string locator = "//*[@class='account__content']//*[@type='button']";
@@ -39,6 +41,20 @@ namespace Framework.POM
             string locator = "//*[@name='Pet.Name']";
             Common.SendKeys(valuePetsName, locator);
 
+        }
+
+     
+
+        //public static void GetSelectOptionInPetsSpecies(string optionText)
+        //{
+        //    string locator = "//*[@id='Pet_PetSpecies']";
+        //    Common.GetSelectOptionText(locator, optionText);
+        //}
+
+        public static void SelectOptionInPetsSpecies(string optionText)
+        {
+            string locator = "//*[@id='Pet_PetSpecies']";
+            Common.SelectOptionByText(locator,optionText);
         }
     }
 }

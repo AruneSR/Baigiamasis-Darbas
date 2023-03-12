@@ -16,7 +16,7 @@ namespace Tests
         {
             Driver.SetupDriver();
             Driver.OpenUrl("https://mumbo.lt/");
-            MumboPage.ClickCookiesAllaccept();
+            UserAccountFormLogin.ClickCookiesAllaccept();
             Basket.ClickDogIcon();
             Basket.ClickProductGertuves();
             Basket.ClickHunterGertuve();

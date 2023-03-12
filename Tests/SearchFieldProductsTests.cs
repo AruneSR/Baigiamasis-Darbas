@@ -18,7 +18,7 @@ namespace Tests
             string valueinputSearch = "pavadeliai";
             Driver.SetupDriver();
             Driver.OpenUrl("https://mumbo.lt/");
-            MumboPage.ClickCookiesAllaccept();
+            UserAccountFormLogin.ClickCookiesAllaccept();
             SearchFieldProduct.EntervalueinputSearch(valueinputSearch);
             SearchFieldProduct.ClickButtonSearch();
             Driver.QuitDriver();
