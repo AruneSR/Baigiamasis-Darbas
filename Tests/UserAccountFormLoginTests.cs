@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Tests
 {
-    internal class UserAccountFormLoginTests
+    internal class UserAccountFormLoginTests : BaseTests
     {
         [Test]
         public void LoginFormWithValidUser()
@@ -27,7 +27,6 @@ namespace Tests
             UserAccountFormLogin.ClickButtonUserPassword();
             UserAccountFormLogin.EnterValueUserPassword(valueUserPassword);
             UserAccountFormLogin.ClickButtonLogin();
-            Driver.QuitDriver();
 
         }
 }   }

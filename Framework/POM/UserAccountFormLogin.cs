@@ -21,7 +21,7 @@ namespace Framework.POM
 
         public static void ClickButtonUserEmail()
         {
-            Common.ClickElement(Locators.UserAccountFormLogin.ButtonIconUserEmail);
+            Common.ClickElement(Locators.UserAccountFormLogin.ButtonFieldUserEmail);
         }
 
         public static void ClickButtonUserPassword()
@@ -36,7 +36,7 @@ namespace Framework.POM
 
         public static void EnterValueUserEmail(string valueUserEmail)
         {
-            Common.SendKeys((string)Locators.UserAccountFormLogin.InputEmail,valueUserEmail);  
+            Common.SendKeys(Locators.UserAccountFormLogin.InputEmail,valueUserEmail);  
         }
 
         public static void EnterValueUserPassword(string valueUserPassword)

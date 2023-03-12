@@ -7,11 +7,9 @@ namespace Framework.POM
 {
     public class Common
     {
-
-
         internal static IWebElement GetElement(string locator)
         {
-
+            System.Threading.Thread.Sleep(2000);
             return Driver.GetDriver().FindElement(By.XPath(locator));
 
         }
@@ -22,38 +20,24 @@ namespace Framework.POM
 
         }
 
-        internal static void SendKeys(string keys, string locator)
+        internal static void SendKeys(string locator, string keys)
         {
             System.Threading.Thread.Sleep(2000);
             Driver.GetDriver().FindElement(By.XPath(locator)).SendKeys(keys);
 
         }
-
-        internal static SelectElement SelectOptionByText(string locator)
-        {
-
-            System.Threading.Thread.Sleep(2000);
-            IWebElement element = GetElement(locator);
-            return new SelectElement(element);
-
-        }
-        internal static void SelectOptionByText(string locator, string Text)
+        internal static void SelectOptionBytext (string locator, string text)
         {
             System.Threading.Thread.Sleep(2000);
             IWebElement element = GetElement(locator);
             SelectElement selectElement = new SelectElement(element);
-           
-            selectElement.SelectByText(Text);
-
+            selectElement.SelectByText(text);
         }
-
-        internal static string GetSelectOptionText(string locator)
+        internal static string GetSelectedOptionText(string locator)
         {
+            System.Threading.Thread.Sleep(2000);
             IWebElement element = GetElement(locator);
             SelectElement selectElement = new SelectElement(element);
             return selectElement.SelectedOption.Text;
         }
-
-       
-       
     }  }

@@ -10,35 +10,27 @@ namespace Framework.POM
     {
         public static void ClickAddToCart()
         {
-            string locator = "//*[@id='addToCart']";
-            Common.ClickElement(locator);
+            Common.ClickElement(Locators.Basket.ButtonAddToCart);
         }
 
         public static void ClickBasketIcon()
         {
-            string locator = "//*[@class='user-controls__cart-label']";
-            Common.ClickElement(locator);
+            Common.ClickElement(Locators.Basket.ButtonBasketIcon);
         }
 
         public static void ClickDogIcon()
         {
-            string locator = "//*[@class='yp-header-desktop']//*[contains(@class,'fal fa-dog')]";
-            Common.ClickElement(locator);
-
+            Common.ClickElement(Locators.Basket.ButtonDogIcon);
         }
 
         public static void ClickHunterGertuve()
         {
-            string locator = "//*[@class='product product-item product-item-1723']";
-            Common.ClickElement(locator);
-
+            Common.ClickElement(Locators.Basket.ButtonHunterGertuve);
         }
 
         public static void ClickProductGertuves()
         {
-            string locator = "//*[@class='yp-header-desktop']//*[contains(@href,'/gertuves-sunims')]";
-            Common.ClickElement(locator);
-
+            Common.ClickElement(Locators.Basket.ButtonProductGertuves);
         }
     }
 

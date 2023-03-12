@@ -9,28 +9,23 @@ namespace Framework.POM
     public class Wishlist
     {
         public static void ClickIconCat()
-        {
-            string locator = "//*[@class='yp-header-desktop']//*[contains(@class,'fal fa-cat')]";
-            Common.ClickElement(locator);
+        { 
+            Common.ClickElement(Locators.Wishlist.ButtonIconCat);
         }
 
         public static void ClickIconHeart()
-        {
-
-            string locator = "//*[@id='product-container']//*[@class='fas fa-heart']";
-            Common.ClickElement(locator);
+        { 
+            Common.ClickElement(Locators.Wishlist.ButtonIconHeart);
         }
 
         public static void ClickIconWishList()
         {
-            string locator = "//*[@class='yp-header-desktop']//*[contains(@class,'flaticon-love')]";
-            Common.ClickElement(locator);
+            Common.ClickElement(Locators.Wishlist.ButtonIconWishlist);
         }
 
         public static void ClickProductGuoliai()
         {
-            string locator = "//*[@class='yp-header-desktop']//*[contains(@href,'/guoliai-guoliai-katems')]";
-            Common.ClickElement(locator);
+            Common.ClickElement(Locators.Wishlist.ButtonProductGuoliai);
         }
     }
 }

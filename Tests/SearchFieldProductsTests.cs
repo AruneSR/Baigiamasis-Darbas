@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Tests
 {
-    internal class SearchFieldProductsTests
+    internal class SearchFieldProductsTests 
     {
 
         [Test]
@@ -19,7 +19,7 @@ namespace Tests
             Driver.SetupDriver();
             Driver.OpenUrl("https://mumbo.lt/");
             UserAccountFormLogin.ClickCookiesAllaccept();
-            SearchFieldProduct.EntervalueinputSearch(valueinputSearch);
+            SearchFieldProduct.EntervalueProductNameInSearchField(valueinputSearch);
             SearchFieldProduct.ClickButtonSearch();
             Driver.QuitDriver();
         }

@@ -11,16 +11,12 @@ namespace Framework.POM
     {
         public static void ClickButtonSearch()
         {
-            string locator = "//*[@class='yp-header-desktop']//*[@id='small-search-box-form']/button";
-            Common.ClickElement(locator);
-
+            Common.ClickElement(Locators.SearchFieldProduct.ButtonSearch);
         }
 
-        public static void EntervalueinputSearch(string valueinputSearch)
+        public static void EntervalueProductNameInSearchField(string valueinputSearch)
         {
-            string locator = "//*[@class='yp-header-desktop']//*[@id='small-searchterms']";
-            Common.SendKeys(valueinputSearch, locator);
-
+            Common.SendKeys(Locators.SearchFieldProduct.inputvalueProductName,valueinputSearch);
         }            
     }
 

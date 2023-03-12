@@ -35,44 +35,16 @@ namespace Tests
           
 
             string selectedSpecies = "Dog";
-            string expectedGimimoDiena = "3";
-            string expectedGimimoMenuo = "11";
-            string expectedGimimoMetai = "2019";
+            string selectedBirthDay = "3";
+            string selectedBirthMonth = "11";
+            string SelectedBirthYear = "2019";
+          
+            UserAccountInfoChanges.SelectOptionInBirthDay(selectedBirthDay);
+            UserAccountInfoChanges.SelectOptionInBirthMonth(selectedBirthMonth);
+            UserAccountInfoChanges.SelectOptionInBirthYear(SelectedBirthYear);
             UserAccountInfoChanges.SelectOptionInPetsSpecies(selectedSpecies);
 
             //Assert.AreEqual(selectedSpecies, UserAccount.GetSelectOptionInPetsSpecies());
-
-
-
-            //IWebElement paspaustiAugintionVardoLauka = driver.FindElement(By.XPath("//*[@name='Pet.Name']"));
-            //paspaustiAugintionVardoLauka.Click();
-
-            //IWebElement inputAugintinioVardas = driver.FindElement(By.XPath("//*[@name='Pet.Name']"));
-            //System.Threading.Thread.Sleep(2000);
-            //inputAugintinioVardas.SendKeys(augintinioVardas);
-            //System.Threading.Thread.Sleep(2000);
-
-            //IWebElement paspaustiAugintinioVeislesLauka = driver.FindElement(By.XPath("//*[@id='Pet_Breed']"));
-            //paspaustiAugintinioVeislesLauka.Click();
-
-
-            //IWebElement inputAugintinioVeisle = driver.FindElement(By.XPath("//*[@id='Pet_Breed']"));
-            //inputAugintinioVeisle.SendKeys(augintinioVeisle);
-
-
-
-
-            ////IWebElement element = driver.FindElement(...).
-            ////SelectElement tipo elementą: SelectElement selectElement = new SelectElement(element).
-
-            ////IWebElement fieldAugintinioRusis = driver.FindElement(By.XPath("//*[@id='Pet_PetSpecies']"));
-            ////fieldAugintinioRusis.Click();
-
-            //System.Threading.Thread.Sleep(2000);
-            //IWebElement fieldAugintinioRusis = driver.FindElement(By.XPath("//*[@id='Pet_PetSpecies']//*[@value='Dog']"));
-            //SelectElement selectRusis = new SelectElement(fieldAugintinioRusis);
-            //selectRusis.SelectByValue("Dog");
-
 
         }
     }  }

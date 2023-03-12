@@ -8,53 +8,53 @@ namespace Framework.POM
 {
     public class UserAccountInfoChanges
     {
-        public static double GetSelectedValue { get; set; }
+      
 
         public static void ClickAddNewPet()
         {
-            string locator = "//*[@class='account__content']//*[@type='button']";
-            Common.ClickElement(locator);
+            Common.ClickElement(Locators.AddNewDogToMyPetsInfo.ButtonAddNewPet);
         }
 
         public static void ClickIconUserAccount()
         {
-            string locator = "//*[@class='yp-header-desktop']//*[contains(@class,'flaticon-user')]";
-            Common.ClickElement(locator);
+            Common.ClickElement(Locators.AddNewDogToMyPetsInfo.ButtonIconUserAccount);
         }
 
         public static void ClickMyPets()
         {
-            string locator = "//*[@href='/customer/pets']";
-            Common.ClickElement(locator);
+            Common.ClickElement(Locators.AddNewDogToMyPetsInfo.ButtonMyPets);
         }
 
         public static void EneterValuePetsBreed(string valuePetsBreed)
         {
-            string locator = "//*[@id='Pet_Breed']";
-            Common.SendKeys(valuePetsBreed, locator);
-
+            Common.SendKeys(Locators.AddNewDogToMyPetsInfo.InputPetsBreed,valuePetsBreed);
         }
 
-       
         public static void EnterValuePetsName(string valuePetsName)
         {
-            string locator = "//*[@name='Pet.Name']";
-            Common.SendKeys(valuePetsName, locator);
-
+            Common.SendKeys(Locators.AddNewDogToMyPetsInfo.InputPetsName,valuePetsName);
+        }
+        public static string GetSelectOptionInPetsSpecies()
+        {
+            return Common.GetSelectedOptionText(Locators.AddNewDogToMyPetsInfo.SelectSpecies);
+        }
+        public static void SelectOptionInBirthDay(string optionText)
+        {
+            Common.SelectOptionBytext(Locators.AddNewDogToMyPetsInfo.SelectDay, optionText);
+        }
+        public static void SelectOptionInBirthMonth(string optionText)
+        {
+            Common.SelectOptionBytext(Locators.AddNewDogToMyPetsInfo.SelectMonth, optionText);
         }
 
-     
-
-        //public static void GetSelectOptionInPetsSpecies(string optionText)
-        //{
-        //    string locator = "//*[@id='Pet_PetSpecies']";
-        //    Common.GetSelectOptionText(locator, optionText);
-        //}
+        public static void SelectOptionInBirthYear(string optionText)
+        {
+            Common.SelectOptionBytext(Locators.AddNewDogToMyPetsInfo.SelectYear, optionText);
+        }
 
         public static void SelectOptionInPetsSpecies(string optionText)
         {
-            string locator = "//*[@id='Pet_PetSpecies']";
-            Common.SelectOptionByText(locator,optionText);
+            Common.SelectOptionBytext(Locators.AddNewDogToMyPetsInfo.SelectSpecies, optionText);
         }
     }
 }
