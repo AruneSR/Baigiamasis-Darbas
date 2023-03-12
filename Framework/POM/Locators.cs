@@ -48,9 +48,11 @@ namespace Framework.POM
             internal static string InputPetsBreed = "//*[@id='Pet_Breed']";
             internal static string InputPetsName = "//*[@name='Pet.Name']";
             internal static string SelectSpecies = "//*[@id='Pet_PetSpecies']";
-            internal static string SelectDay = "//*[@id='modaal_1678630600112ea0b12bc40c13']/div/div/div/div/div/form/div[2]/div/div/div/select[1]";
-            internal static string SelectMonth = "//*[@id='modaal_1678630600112ea0b12bc40c13']/div/div/div/div/div/form/div[2]/div/div/div/select[2]";
-            internal static string SelectYear = "//*[@id='modaal_1678630600112ea0b12bc40c13']/div/div/div/div/div/form/div[2]/div/div/div/select[3]";
+            internal static string SelectDay = "//*[@name='Pet.DateOfBirthDay']";
+            internal static string SelectMonth = "//*[@name='Pet.DateOfBirthMonth']";
+            internal static string SelectYear = "//*[@name='Pet.DateOfBirthYear']";
+            internal static string ButtonToSave = "//*[@class='form__controls']//*[@type='submit']";
+            internal static string NotificationBar = "//*[@id='notificationBar']/div/div[2]";
         }
         
     }

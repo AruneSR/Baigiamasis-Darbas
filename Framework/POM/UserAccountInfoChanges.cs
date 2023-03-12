@@ -8,11 +8,14 @@ namespace Framework.POM
 {
     public class UserAccountInfoChanges
     {
-      
-
         public static void ClickAddNewPet()
         {
             Common.ClickElement(Locators.AddNewDogToMyPetsInfo.ButtonAddNewPet);
+        }
+
+        public static void CLickButtonToSave()
+        {
+            Common.ClickElement(Locators.AddNewDogToMyPetsInfo.ButtonToSave);
         }
 
         public static void ClickIconUserAccount()
@@ -24,7 +27,6 @@ namespace Framework.POM
         {
             Common.ClickElement(Locators.AddNewDogToMyPetsInfo.ButtonMyPets);
         }
-
         public static void EneterValuePetsBreed(string valuePetsBreed)
         {
             Common.SendKeys(Locators.AddNewDogToMyPetsInfo.InputPetsBreed,valuePetsBreed);
@@ -38,6 +40,12 @@ namespace Framework.POM
         {
             return Common.GetSelectedOptionText(Locators.AddNewDogToMyPetsInfo.SelectSpecies);
         }
+
+        public static string NotificationSucces()
+        {
+            return Common.GetElementText(Locators.AddNewDogToMyPetsInfo.NotificationBar);
+        }
+
         public static void SelectOptionInBirthDay(string optionText)
         {
             Common.SelectOptionBytext(Locators.AddNewDogToMyPetsInfo.SelectDay, optionText);

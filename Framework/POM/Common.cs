@@ -40,4 +40,11 @@ namespace Framework.POM
             SelectElement selectElement = new SelectElement(element);
             return selectElement.SelectedOption.Text;
         }
+
+        internal static string GetElementText(string locator)
+        {
+            System.Threading.Thread.Sleep(2000);
+            return GetElement(locator).Text;
+            
+        }
     }  }
