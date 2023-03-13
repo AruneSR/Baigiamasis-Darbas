@@ -48,11 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="5 Tests\BasketTests.cs" />
-    <Compile Include="5 Tests\SearchFieldProductsTests.cs" />
-    <Compile Include="5 Tests\UserAccountFormLoginTests.cs" />
-    <Compile Include="5 Tests\UserAccountInfoChangesTests.cs" />
-    <Compile Include="5 Tests\WishlistTest.cs" />
+    <Compile Include="BasketTests 3\BasketTests.cs" />
+    <Compile Include="SearchFieldProductTests 5\SearchFieldProductsTests.cs" />
+    <Compile Include="UserAccountTests 1,2\UserAccountFormLoginTests.cs" />
+    <Compile Include="UserAccountTests 1,2\UserAccountInfoChangesTests.cs" />
+    <Compile Include="WishlistTests 4\WishlistTest.cs" />
     <Compile Include="BaseTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
