@@ -14,7 +14,7 @@ namespace Framework.POM
             Common.ClickElement(Locators.SearchFieldProduct.ButtonSearch);
         }
 
-        public static void EntervalueProductNameInSearchField(string valueinputSearch)
+        public static void EntervalidProductNameInSearchField(string valueinputSearch)
         {
             Common.SendKeys(Locators.SearchFieldProduct.inputvalueProductName,valueinputSearch);
         }            

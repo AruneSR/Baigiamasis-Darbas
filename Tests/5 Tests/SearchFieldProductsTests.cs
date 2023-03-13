@@ -17,7 +17,7 @@ namespace Tests
         {
             string valueinputSearch = "pavadeliai";
             
-            SearchFieldProduct.EntervalueProductNameInSearchField(valueinputSearch);
+            SearchFieldProduct.EntervalidProductNameInSearchField(valueinputSearch);
             SearchFieldProduct.ClickButtonSearch();
         }
     }

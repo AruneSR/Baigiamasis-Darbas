@@ -24,9 +24,9 @@ namespace Framework.POM
         {
             internal static string ButtonAddToCart = "//*[@id='addToCart']";
             internal static string ButtonDogIcon = "//*[@class='yp-header-desktop']//*[contains(@class,'fal fa-dog')]";
-            internal static string ButtonHunterGertuve = "//*[@class='product product-item product-item-1723']";
             internal static string ButtonProductGertuves = "//*[@class='yp-header-desktop']//*[contains(@href,'/gertuves-sunims')]";
             internal static string NotificationBar = "//*[@class='notification__content']";
+            internal static string ButtonFirstProduct = "//*[@class='product product-item product-item-1723']";
         }
         internal static class SearchFieldProduct
         {

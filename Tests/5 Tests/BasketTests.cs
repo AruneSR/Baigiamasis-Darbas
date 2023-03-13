@@ -18,9 +18,10 @@ namespace Tests
       
             Basket.ClickDogIcon();
             Basket.ClickProductGertuves();
-            Basket.ClickHunterGertuve();
+            Common.ScrollByPixels(0, 400);
+            Basket.ClicFirstProductFromList();
             Basket.ClickAddToCart();
-            
+
             Assert.AreEqual(expectedText, Basket.NotificationSuccess());
         }
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenQA.Selenium.Support.Extensions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,13 +18,14 @@ namespace Framework.POM
             Common.ClickElement(Locators.Basket.ButtonDogIcon);
         }
 
-        public static void ClickHunterGertuve()
+        public static void ClicFirstProductFromList()
         {
-            Common.ClickElement(Locators.Basket.ButtonHunterGertuve);
+
+            Common.ClickElement(Locators.Basket.ButtonFirstProduct);
         }
 
         public static void ClickProductGertuves()
-        {
+        {   
             Common.ClickElement(Locators.Basket.ButtonProductGertuves);
         }
 

@@ -1,5 +1,6 @@
 ﻿
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.Extensions;
 using OpenQA.Selenium.Support.UI;
 using System;
 
@@ -50,5 +51,18 @@ namespace Framework.POM
             System.Threading.Thread.Sleep(2000);
             return GetElement(locator).Text;
             
+        }
+       
+        private static void ExecuteJavaScript(string script)
+        {
+            System.Threading.Thread.Sleep(2000);
+            Driver.GetDriver().ExecuteJavaScript(script);
+
+        }
+
+        public static void ScrollByPixels(int x, int y)
+        {
+            System.Threading.Thread.Sleep(2000);
+            ExecuteJavaScript($"window.scrollBy({x}, {y})");
         }
     }  }
