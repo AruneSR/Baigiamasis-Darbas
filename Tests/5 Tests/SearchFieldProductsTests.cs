@@ -9,19 +9,16 @@ using System.Threading.Tasks;
 
 namespace Tests
 {
-    internal class SearchFieldProductsTests 
+    internal class SearchFieldProductsTests : BaseTests 
     {
 
         [Test]
         public void SearchFieldProducts()
         {
             string valueinputSearch = "pavadeliai";
-            Driver.SetupDriver();
-            Driver.OpenUrl("https://mumbo.lt/");
-            UserAccountFormLogin.ClickCookiesAllaccept();
+            
             SearchFieldProduct.EntervalueProductNameInSearchField(valueinputSearch);
             SearchFieldProduct.ClickButtonSearch();
-            Driver.QuitDriver();
         }
     }
 }

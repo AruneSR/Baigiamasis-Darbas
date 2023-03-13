@@ -9,21 +9,19 @@ using NUnit.Framework;
 
 namespace Tests
 {
-    internal class BasketTests
+    internal class BasketTests : BaseTests
     {
         [Test]
         public void AddProductToBasket()
         {
-            Driver.SetupDriver();
-            Driver.OpenUrl("https://mumbo.lt/");
-            UserAccountFormLogin.ClickCookiesAllaccept();
+            string expectedText = "Produktas įdėtas į jūsų prekių krepšelį";
+      
             Basket.ClickDogIcon();
             Basket.ClickProductGertuves();
             Basket.ClickHunterGertuve();
             Basket.ClickAddToCart();
-            Basket.ClickBasketIcon();
-            Driver.QuitDriver();
-
+            
+            Assert.AreEqual(expectedText, Basket.NotificationSuccess());
         }
     }
 }

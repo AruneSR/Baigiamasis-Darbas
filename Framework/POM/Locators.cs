@@ -23,10 +23,10 @@ namespace Framework.POM
         internal static class Basket
         {
             internal static string ButtonAddToCart = "//*[@id='addToCart']";
-            internal static string ButtonBasketIcon = "//*[@class='user-controls__cart-label']";
             internal static string ButtonDogIcon = "//*[@class='yp-header-desktop']//*[contains(@class,'fal fa-dog')]";
             internal static string ButtonHunterGertuve = "//*[@class='product product-item product-item-1723']";
             internal static string ButtonProductGertuves = "//*[@class='yp-header-desktop']//*[contains(@href,'/gertuves-sunims')]";
+            internal static string NotificationBar = "//*[@class='notification__content']";
         }
         internal static class SearchFieldProduct
         {
@@ -36,7 +36,7 @@ namespace Framework.POM
         internal static class Wishlist
         {
             internal static string ButtonIconCat = "//*[@class='yp-header-desktop']//*[contains(@class,'fal fa-cat')]";
-            internal static string ButtonIconHeart = "//*[@id='product-container']//*[@class='fas fa-heart']";
+            internal static string ButtonIconHeart = "//*[@class='product__favorite']";
             internal static string ButtonIconWishlist = "//*[@class='yp-header-desktop']//*[contains(@class,'flaticon-love')]"; 
             internal static string ButtonProductGuoliai = "//*[@class='yp-header-desktop']//*[contains(@href,'/guoliai-guoliai-katems')]";
         }

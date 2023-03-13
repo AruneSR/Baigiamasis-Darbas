@@ -9,18 +9,14 @@ using NUnit.Framework;
 
 namespace Tests
 {
-    internal class WishlistTest
+    internal class WishlistTest : BaseTests
     {
         [Test]
         public void AddProductToWishList()
         {
-           
-
             string valueUserEmail = "missarune@gmail.com";
             string valueUserPassword = "Mumbo2023";
-            Driver.SetupDriver();
-            Driver.OpenUrl("https://mumbo.lt/");
-            UserAccountFormLogin.ClickCookiesAllaccept();
+          
             UserAccountFormLogin.ClickButtonIconUser();
             UserAccountFormLogin.ClickButtonUserEmail();
             UserAccountFormLogin.EnterValueUserEmail(valueUserEmail);
@@ -31,7 +27,6 @@ namespace Tests
             Wishlist.ClickProductGuoliai();
             Wishlist.ClickIconHeart();
             Wishlist.ClickIconWishList();
-            Driver.QuitDriver();
 
         }
 

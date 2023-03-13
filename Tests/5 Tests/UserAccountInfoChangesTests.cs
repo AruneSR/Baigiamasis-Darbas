@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Tests
 {
-    internal class UserAccountInfoChangesTests
+    internal class UserAccountInfoChangesTests : BaseTests
     {
         [Test]
         public void AddNewDogToMyPetsInfo()
@@ -17,9 +17,6 @@ namespace Tests
             string expectedText = "Jūsų augintinis buvo sėkmingai pridėtas";
             string valueUserEmail = "missarune@gmail.com";
             string valueUserPassword = "Mumbo2023";
-            Driver.SetupDriver();
-            Driver.OpenUrl("https://mumbo.lt/");
-            UserAccountFormLogin.ClickCookiesAllaccept();
             UserAccountFormLogin.ClickButtonIconUser();
             UserAccountFormLogin.ClickButtonUserEmail();
             UserAccountFormLogin.EnterValueUserEmail(valueUserEmail);
@@ -43,7 +40,7 @@ namespace Tests
             UserAccountInfoChanges.SelectOptionInPetsSpecies(selectedSpecies);
             UserAccountInfoChanges.CLickButtonToSave();
 
-            Assert.AreEqual(expectedText, UserAccountInfoChanges.NotificationSucces());
+            Assert.AreEqual(expectedText, UserAccountInfoChanges.NotificationSuccess());
 
         }
     }  }

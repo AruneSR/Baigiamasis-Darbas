@@ -17,10 +17,6 @@ namespace Tests
         {
             string valueUserEmail = "missarune@gmail.com";
             string valueUserPassword = "Mumbo2023";
-
-            Driver.SetupDriver();
-            Driver.OpenUrl("https://mumbo.lt/");
-            UserAccountFormLogin.ClickCookiesAllaccept();
             UserAccountFormLogin.ClickButtonIconUser();
             UserAccountFormLogin.ClickButtonUserEmail();  
             UserAccountFormLogin.EnterValueUserEmail(valueUserEmail);  

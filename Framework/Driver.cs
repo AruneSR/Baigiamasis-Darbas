@@ -30,6 +30,7 @@ namespace Framework
         public static void OpenUrl(string url)
         {
             driver.Url = url;
+            
         }
         public static void QuitDriver()
         {

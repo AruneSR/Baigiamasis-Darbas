@@ -12,12 +12,6 @@ namespace Framework.POM
         {
             Common.ClickElement(Locators.Basket.ButtonAddToCart);
         }
-
-        public static void ClickBasketIcon()
-        {
-            Common.ClickElement(Locators.Basket.ButtonBasketIcon);
-        }
-
         public static void ClickDogIcon()
         {
             Common.ClickElement(Locators.Basket.ButtonDogIcon);
@@ -31,6 +25,11 @@ namespace Framework.POM
         public static void ClickProductGertuves()
         {
             Common.ClickElement(Locators.Basket.ButtonProductGertuves);
+        }
+
+        public static string NotificationSuccess()
+        {
+            return Common.GetElementText(Locators.Basket.NotificationBar);
         }
     }
 

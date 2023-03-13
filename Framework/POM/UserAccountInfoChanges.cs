@@ -41,7 +41,7 @@ namespace Framework.POM
             return Common.GetSelectedOptionText(Locators.AddNewDogToMyPetsInfo.SelectSpecies);
         }
 
-        public static string NotificationSucces()
+        public static string NotificationSuccess()
         {
             return Common.GetElementText(Locators.AddNewDogToMyPetsInfo.NotificationBar);
         }

@@ -7,6 +7,10 @@ namespace Framework.POM
 {
     public class Common
     {
+        public static void OpenUrl(string url)
+        {
+            Driver.GetDriver().Url = "https://mumbo.lt/";
+        }
         internal static IWebElement GetElement(string locator)
         {
             System.Threading.Thread.Sleep(2000);
