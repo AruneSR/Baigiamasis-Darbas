@@ -160,7 +160,7 @@ namespace Baigiamasis_Darbas
             buttonGuoliai.Click();
             System.Threading.Thread.Sleep(2000);
 
-            IWebElement buttonIconHeart = driver.FindElement(By.XPath("//*[@class='fas fa-heart']"));
+            IWebElement buttonIconHeart = driver.FindElement(By.XPath("//*[@class='product__favorite']"));
             buttonIconHeart.Click();
             System.Threading.Thread.Sleep(2000);
 
