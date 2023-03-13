@@ -32,6 +32,8 @@ Test scenario: Basket functionality
 
 -Test case 3 - Check if user is able to add product to basket. 
 
+Steps:
+
 1. Click icon "Dog"
 2. Choose section "Drinkers"
 3. Click on first product from list
@@ -42,6 +44,8 @@ Expected Result - After adding product to basket, you get massage bar "Your prod
 Test scenario: Wishlist functionality
 
 -Test case 4 - Check if user is able to mark favorite products and add it to wish list
+
+Steps:
 
 1. Login to user account
 2. Click icon "Cat"
@@ -55,6 +59,8 @@ Expected Result - After marking icon "Heart" product appears to wishlist.
 Test scenario: Product Search field functionality
 
 -Test case 5 - Check if user is able to find valid product from product search field on homepage.
+
+Steps:
 
 1. Open website
 2. Accept "All Cookies"
