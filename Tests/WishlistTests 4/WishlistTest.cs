@@ -28,6 +28,8 @@ namespace Tests
             Wishlist.ClickIconHeart();
             Wishlist.ClickIconWishList();
 
+            Assert.IsTrue(Wishlist.CheckIfMarkedHeartProductsCanFindOnWishlist());
+
         }
 
     }

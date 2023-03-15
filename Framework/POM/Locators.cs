@@ -40,6 +40,7 @@ namespace Framework.POM
             internal static string ButtonIconHeart = "//*[@class='product__favorite']";
             internal static string ButtonIconWishlist = "//*[@class='yp-header-desktop']//*[contains(@class,'flaticon-love')]"; 
             internal static string ButtonProductGuoliai = "//*[@class='yp-header-desktop']//*[contains(@href,'/guoliai-guoliai-katems')]";
+            internal static string MarkedHeartProducts = "//*[@class='category-products__total']";
         }
         internal static class AddNewDogToMyPetsInfo
         {
