@@ -8,7 +8,6 @@ namespace Framework.POM
 {
     internal class Locators
     {
-
         internal static class UserAccountFormLogin
         { 
             internal static string ButtonIconUser  = "//*[@class='yp-header-desktop']//*[contains(@class,'user-controls__login')]";

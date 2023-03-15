@@ -16,21 +16,16 @@ namespace Framework.POM
         {
             System.Threading.Thread.Sleep(2000);
             return Driver.GetDriver().FindElement(By.XPath(locator));
-
         }
         internal static void ClickElement(string locator)
         {
             System.Threading.Thread.Sleep(2000);
             GetElement(locator).Click();
-            
-
         }
-
         internal static void SendKeys(string locator, string keys)
         {
             System.Threading.Thread.Sleep(2000);
             Driver.GetDriver().FindElement(By.XPath(locator)).SendKeys(keys);
-
         }
         internal static void SelectOptionBytext (string locator, string text)
         {
@@ -50,15 +45,13 @@ namespace Framework.POM
         internal static string GetElementText(string locator)
         {
             System.Threading.Thread.Sleep(2000);
-            return GetElement(locator).Text;
-            
+            return GetElement(locator).Text;      
         }
        
         private static void ExecuteJavaScript(string script)
         {
             System.Threading.Thread.Sleep(2000);
             Driver.GetDriver().ExecuteJavaScript(script);
-
         }
 
         public static void ScrollByPixels(int x, int y)

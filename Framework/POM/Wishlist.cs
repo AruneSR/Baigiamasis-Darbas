@@ -8,11 +8,10 @@ namespace Framework.POM
 {
     public class Wishlist
     {
-        public static bool? CheckIfMarkedHeartProductsCanFindOnWishlist()
+        public static bool CheckIfMarkedHeartProductsCanFindOnWishlist()
         {
             return Common.GetElementDisplayedStatus(Locators.Wishlist.MarkedHeartProducts);
         }
-
         public static void ClickIconCat()
         { 
             Common.ClickElement(Locators.Wishlist.ButtonIconCat);
@@ -22,12 +21,10 @@ namespace Framework.POM
         { 
             Common.ClickElement(Locators.Wishlist.ButtonIconHeart);
         }
-
         public static void ClickIconWishList()
         {
             Common.ClickElement(Locators.Wishlist.ButtonIconWishlist);
         }
-
         public static void ClickProductGuoliai()
         {
             Common.ClickElement(Locators.Wishlist.ButtonProductGuoliai);

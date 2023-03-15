@@ -91,7 +91,6 @@ namespace Baigiamasis_Darbas
         public void AddProductToBasket()
         {
 
-
             IWebDriver driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
             driver.Url = "https://mumbo.lt/";
@@ -112,11 +111,7 @@ namespace Baigiamasis_Darbas
             IWebElement addToCart = driver.FindElement(By.XPath("//*[@id='addToCart']"));
             addToCart.Click();
             System.Threading.Thread.Sleep(2000);
-
-
             driver.Quit();
-
-
 
         }
 
@@ -125,13 +120,10 @@ namespace Baigiamasis_Darbas
         [Test]
         public void AddProductToWishList()
         {
-
-
             IWebDriver driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
             driver.Url = "https://mumbo.lt/";
             System.Threading.Thread.Sleep(2000);
-
             IWebElement acceptAll = driver.FindElement(By.XPath("//*[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']"));
             acceptAll.Click();
             System.Threading.Thread.Sleep(2000);
@@ -140,7 +132,6 @@ namespace Baigiamasis_Darbas
             System.Threading.Thread.Sleep(2000);
             string valueUserEmail = "missarune@gmail.com";
             string valuePassword = "Mumbo2023";
-            
             IWebElement inputUserEmail = driver.FindElement(By.XPath("//*[@id='Email']"));
             System.Threading.Thread.Sleep(2000);
             IWebElement inputPassword = driver.FindElement(By.XPath("//*[@id='Password']"));
@@ -151,7 +142,6 @@ namespace Baigiamasis_Darbas
             System.Threading.Thread.Sleep(2000);
             inputPassword.SendKeys(valuePassword);
             buttonLogin.Click();
-
             System.Threading.Thread.Sleep(2000);
             IWebElement buttonIconCat = driver.FindElement(By.XPath("//*[@class='yp-header-desktop']//*[contains(@class,'fal fa-cat')]"));
             buttonIconCat.Click();
@@ -159,30 +149,21 @@ namespace Baigiamasis_Darbas
             IWebElement buttonGuoliai = driver.FindElement(By.XPath("//*[@class='yp-header-desktop']//*[contains(@href,'/guoliai-guoliai-katems')]"));
             buttonGuoliai.Click();
             System.Threading.Thread.Sleep(2000);
-
             IWebElement buttonIconHeart = driver.FindElement(By.XPath("//*[@class='product__favorite']"));
             buttonIconHeart.Click();
             System.Threading.Thread.Sleep(2000);
-
             IWebElement buttonWishList = driver.FindElement(By.XPath("//*[@class='yp-header-desktop']//*[contains(@class,'flaticon-love')]"));
             buttonWishList.Click();
-
             System.Threading.Thread.Sleep(2000);
-
             driver.Quit();
-
-
         }
         [Test]
         public void AddNewDogToMyPetsInfo()
         {
-
-
             IWebDriver driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
             driver.Url = "https://mumbo.lt/";
             System.Threading.Thread.Sleep(2000);
-
             IWebElement acceptAll = driver.FindElement(By.XPath("//*[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']"));
             acceptAll.Click();
             System.Threading.Thread.Sleep(2000);
@@ -191,87 +172,49 @@ namespace Baigiamasis_Darbas
             System.Threading.Thread.Sleep(2000);
             string valueUserEmail = "missarune@gmail.com";
             string valuePassword = "Mumbo2023";
-
             IWebElement inputUserEmail = driver.FindElement(By.XPath("//*[@id='Email']"));
             System.Threading.Thread.Sleep(2000);
             IWebElement inputPassword = driver.FindElement(By.XPath("//*[@id='Password']"));
             System.Threading.Thread.Sleep(2000);
             IWebElement buttonLogin = driver.FindElement(By.XPath("//*[@action='/loginform']//*[@type='submit']"));
             System.Threading.Thread.Sleep(2000);
-
             inputUserEmail.SendKeys(valueUserEmail);
-
             System.Threading.Thread.Sleep(2000);
-
             inputPassword.SendKeys(valuePassword);
             System.Threading.Thread.Sleep(2000);
-
             buttonLogin.Click();
-
-
             System.Threading.Thread.Sleep(2000);
-
-
             IWebElement IconVartotojoPaskyra = driver.FindElement(By.XPath("//*[@class='yp-header-desktop']//*[contains(@class,'flaticon-user')]"));
             IconVartotojoPaskyra.Click();
             System.Threading.Thread.Sleep(2000);
-
             IWebElement buttonManoAugintiniai = driver.FindElement(By.XPath("//*[@href='/customer/pets']"));
             buttonManoAugintiniai.Click();
             System.Threading.Thread.Sleep(2000);
-
             IWebElement PridetiNaujaAugintini = driver.FindElement(By.XPath("//*[@class='account__content']//*[@type='button']"));
             PridetiNaujaAugintini.Click();
             System.Threading.Thread.Sleep(2000);
             string augintinioVardas = "Amigo";
             string augintinioVeisle = "Vilkas";
-
             IWebElement paspaustiAugintionVardoLauka = driver.FindElement(By.XPath("//*[@name='Pet.Name']"));
             paspaustiAugintionVardoLauka.Click();
-
             IWebElement inputAugintinioVardas = driver.FindElement(By.XPath("//*[@name='Pet.Name']"));
             System.Threading.Thread.Sleep(2000);
             inputAugintinioVardas.SendKeys(augintinioVardas);
             System.Threading.Thread.Sleep(2000);
-
             IWebElement paspaustiAugintinioVeislesLauka = driver.FindElement(By.XPath("//*[@id='Pet_Breed']"));
             paspaustiAugintinioVeislesLauka.Click();
-
-
             IWebElement inputAugintinioVeisle = driver.FindElement(By.XPath("//*[@id='Pet_Breed']"));
             inputAugintinioVeisle.SendKeys(augintinioVeisle);
-
             System.Threading.Thread.Sleep(2000);
             string expectedRusis = "Dog";
             string expectedGimimoDiena = "3";
             string expectedGimimoMenuo = "11";
             string expectedGimimoMetai = "2019";
-
-
-            //IWebElement element = driver.FindElement(...).
-            //SelectElement tipo elementą: SelectElement selectElement = new SelectElement(element).
-
-            //IWebElement fieldAugintinioRusis = driver.FindElement(By.XPath("//*[@id='Pet_PetSpecies']"));
-            //fieldAugintinioRusis.Click();
-
             System.Threading.Thread.Sleep(2000);
             IWebElement fieldAugintinioRusis = driver.FindElement(By.XPath("//*[@id='Pet_PetSpecies']//*[@value='Dog']"));
             SelectElement selectRusis = new SelectElement(fieldAugintinioRusis);
             selectRusis.SelectByValue("Dog");
-
-
-
-
-
-
-
-
             driver.Quit();
-
-
-
-
-
         }
     }
 }       
