@@ -19,38 +19,27 @@ namespace Baigiamasis_Darbas
         public void LoginFormWithValidUser()
         {
          
-
             IWebDriver driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
             driver.Url = "https://mumbo.lt/";
-
             IWebElement acceptAll = driver.FindElement(By.XPath("//*[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']"));
             acceptAll.Click();
             System.Threading.Thread.Sleep(2000);
-
-
             IWebElement buttonIconUser = driver.FindElement(By.XPath("//*[@class='yp-header-desktop']//*[contains(@class,'user-controls__login')]"));
             buttonIconUser.Click();
-
             string valueUserEmail = "missarune@gmail.com";
             string valuePassword = "Mumbo2023";
             System.Threading.Thread.Sleep(2000);
-
             IWebElement inputUserEmail = driver.FindElement(By.XPath("//*[@id='Email']"));
             System.Threading.Thread.Sleep(2000);
             IWebElement inputPassword = driver.FindElement(By.XPath("//*[@id='Password']"));
             System.Threading.Thread.Sleep(3000);
             IWebElement buttonLogin = driver.FindElement(By.XPath("//*[@action='/loginform']//*[@type='submit']"));
             System.Threading.Thread.Sleep(2000);
-
             inputUserEmail.SendKeys(valueUserEmail);
             System.Threading.Thread.Sleep(2000);
-
-
             inputPassword.SendKeys(valuePassword);
             buttonLogin.Click();
-
-
             driver.Quit();
         }
 
@@ -63,10 +52,8 @@ namespace Baigiamasis_Darbas
             driver.Manage().Window.Maximize();
             driver.Url = "https://mumbo.lt/";
             System.Threading.Thread.Sleep(2000);
-
             IWebElement acceptAll = driver.FindElement(By.XPath("//*[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']"));
             acceptAll.Click();
-
             string valueinputSearch = "pavadeliai";
             System.Threading.Thread.Sleep(2000);
             IWebElement Search = driver.FindElement(By.XPath("//*[@class='yp-header-desktop']//*[@id='small-searchterms']"));
@@ -77,13 +64,8 @@ namespace Baigiamasis_Darbas
             System.Threading.Thread.Sleep(2000);
             IWebElement buttonSearch = driver.FindElement(By.XPath("//*[@class='yp-header-desktop']//*[@id='small-search-box-form']/button"));
             buttonSearch.Click();
-
             driver.Quit();
         }
-
-
-
-
 
 
         [Test]
@@ -95,7 +77,6 @@ namespace Baigiamasis_Darbas
             driver.Manage().Window.Maximize();
             driver.Url = "https://mumbo.lt/";
             System.Threading.Thread.Sleep(2000);
-
             IWebElement acceptAll = driver.FindElement(By.XPath("//*[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']"));
             acceptAll.Click();
             System.Threading.Thread.Sleep(2000);
@@ -114,8 +95,6 @@ namespace Baigiamasis_Darbas
             driver.Quit();
 
         }
-
-
 
         [Test]
         public void AddProductToWishList()
