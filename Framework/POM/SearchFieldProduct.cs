@@ -21,7 +21,7 @@ namespace Framework.POM
 
         public static void EntervalidProductNameInSearchField(string valueinputSearch)
         {
-            Common.SendKeys(Locators.SearchFieldProduct.inputvalueProductName,valueinputSearch);
+            Common.SendKeys(Locators.SearchFieldProduct.InputvalueProductName,valueinputSearch);
         }            
     }
 
