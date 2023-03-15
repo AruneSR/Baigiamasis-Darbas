@@ -22,6 +22,7 @@ namespace Framework.POM
         {
             System.Threading.Thread.Sleep(2000);
             GetElement(locator).Click();
+            
 
         }
 
@@ -64,5 +65,11 @@ namespace Framework.POM
         {
             System.Threading.Thread.Sleep(2000);
             ExecuteJavaScript($"window.scrollBy({x}, {y})");
+        }
+
+        internal static bool GetElementDisplayedStatus(string locator)
+        {
+            System.Threading.Thread.Sleep(2000);
+            return GetElement(locator).Displayed;
         }
     }  }

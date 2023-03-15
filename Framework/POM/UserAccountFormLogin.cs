@@ -9,6 +9,11 @@ namespace Framework.POM
 {
     public class UserAccountFormLogin
     {
+        public static bool CheckIfFieldLogOutIsVisible()
+        {
+            return Common.GetElementDisplayedStatus(Locators.UserAccountFormLogin.FieldLogOut);
+        }
+
         public static void ClickButtonIconUser()
         {
             Common.ClickElement(Locators.UserAccountFormLogin.ButtonIconUser);

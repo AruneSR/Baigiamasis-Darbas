@@ -18,6 +18,7 @@ namespace Framework.POM
             internal static string ButtonCookiesAllaccept = "//*[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']";
             internal static string InputEmail = "//*[@id='Email']";
             internal static string InputPassword = "//*[@id='Password']";
+            internal static string FieldLogOut = "//*[@class='top-bar__link top-bar__logout']";
         }
 
         internal static class Basket

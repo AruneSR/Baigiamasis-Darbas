@@ -24,6 +24,7 @@ namespace Tests
             UserAccountFormLogin.EnterValueUserPassword(valueUserPassword);
             UserAccountFormLogin.ClickButtonLogin();
 
+            Assert.IsTrue(UserAccountFormLogin.CheckIfFieldLogOutIsVisible());
         }
 }   }
 
