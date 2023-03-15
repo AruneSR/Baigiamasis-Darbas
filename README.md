@@ -17,14 +17,11 @@ Expected Result - After entering valid information into "User Account Form" fiel
 
 Steps:
 
-1. Click "User Login" icon
-2. Enter valid email address
-3. Enter valid password
-4. Click "Submit" button
-5. Choose from meniu "My Pets" section
-6. Click "Add New Pet" 
-7. Fill in information
-8. Click "Submit" botton
+1. Login to user account
+2. Choose from meniu "My Pets" section
+3. Click "Add New Pet" 
+4. Fill in information
+5. Click "Submit" botton
 
 Expected Result - After entering information, you get massage "Your pet succeesfully add it"
 
