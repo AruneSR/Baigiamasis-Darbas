@@ -31,7 +31,7 @@ namespace Framework.POM
         internal static class SearchFieldProduct
         {
             internal static string ButtonSearch = "//*[@class='yp-header-desktop']//*[@id='small-search-box-form']/button";
-            internal static string inputvalueProductName = "//*[@class='yp-header-desktop']//*[@id='small-searchterms']";
+            internal static string InputvalueProductName = "//*[@class='yp-header-desktop']//*[@id='small-searchterms']";
             internal static string TotalListOfProducts = "//*[@class='category-products__main']//*[@class='category-products__total']";
         }
         internal static class Wishlist
