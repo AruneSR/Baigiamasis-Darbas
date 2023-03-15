@@ -33,6 +33,7 @@ namespace Framework.POM
         {
             internal static string ButtonSearch = "//*[@class='yp-header-desktop']//*[@id='small-search-box-form']/button";
             internal static string inputvalueProductName = "//*[@class='yp-header-desktop']//*[@id='small-searchterms']";
+            internal static string TotalListOfProducts = "//*[@class='category-products__main']//*[@class='category-products__total']";
         }
         internal static class Wishlist
         {
@@ -40,7 +41,7 @@ namespace Framework.POM
             internal static string ButtonIconHeart = "//*[@class='product__favorite']";
             internal static string ButtonIconWishlist = "//*[@class='yp-header-desktop']//*[contains(@class,'flaticon-love')]"; 
             internal static string ButtonProductGuoliai = "//*[@class='yp-header-desktop']//*[contains(@href,'/guoliai-guoliai-katems')]";
-            internal static string MarkedHeartProducts = "//*[@class='category-products__total']";
+            internal static string MarkedHeartProducts = "//*[@class='wishlist-products']//*[@class='category-products__total']";
         }
         internal static class AddNewDogToMyPetsInfo
         {

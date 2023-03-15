@@ -19,6 +19,8 @@ namespace Tests
             
             SearchFieldProduct.EntervalidProductNameInSearchField(valueinputSearch);
             SearchFieldProduct.ClickButtonSearch();
+
+            Assert.IsTrue(SearchFieldProduct.CheckIfappearsTotalListOfProducts());
         }
     }
 }

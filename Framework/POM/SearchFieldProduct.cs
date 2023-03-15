@@ -9,6 +9,11 @@ namespace Framework.POM
 {
     public class SearchFieldProduct
     {
+        public static bool? CheckIfappearsTotalListOfProducts()
+        {
+            return Common.GetElementDisplayedStatus(Locators.SearchFieldProduct.TotalListOfProducts);
+        }
+
         public static void ClickButtonSearch()
         {
             Common.ClickElement(Locators.SearchFieldProduct.ButtonSearch);
