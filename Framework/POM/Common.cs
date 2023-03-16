@@ -65,4 +65,10 @@ namespace Framework.POM
             System.Threading.Thread.Sleep(2000);
             return GetElement(locator).Displayed;
         }
+
+        internal static void GetElementClear(string locator)
+        {
+            System.Threading.Thread.Sleep(2000);
+            GetElement(locator).Clear();
+        }
     }  }

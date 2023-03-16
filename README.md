@@ -59,9 +59,11 @@ Test scenario: Product Search field functionality
 
 Steps:
 
-1. Open website
-2. Accept "All Cookies"
-3. Enter product name "leashes"
-4. Click button "Search"
+1. Enter product name "leashes"
+2. Click button "Search"
+3. Delete "Price From" 
+4. Change to "1"
+5. Delete "Price To" 
+6. Change to "50"
 
-Expected Result - After entering valid product name appears all list of this product.
+Expected Result - After entering valid product name and price appears all list of this product.

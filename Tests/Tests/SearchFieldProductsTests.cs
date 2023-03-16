@@ -16,9 +16,15 @@ namespace Tests
         public void SearchFieldProducts()
         {
             string valueinputSearch = "pavadeliai";
+            string valueinputPriceFrom = "1";
+            string valueinputPriceTo = "50";
             
             SearchFieldProduct.EntervalidProductNameInSearchField(valueinputSearch);
             SearchFieldProduct.ClickButtonSearch();
+            SearchFieldProduct.ClearTheTextBoxFrom();
+            SearchFieldProduct.EnterPriceFrom(valueinputPriceFrom);
+            SearchFieldProduct.ClearTheTextBoxTo();
+            SearchFieldProduct.EnterPriceTo(valueinputPriceTo);
 
             Assert.IsTrue(SearchFieldProduct.CheckIfappearsTotalListOfProducts());
         }

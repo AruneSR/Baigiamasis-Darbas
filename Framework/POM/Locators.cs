@@ -33,6 +33,10 @@ namespace Framework.POM
             internal static string ButtonSearch = "//*[@class='yp-header-desktop']//*[@id='small-search-box-form']/button";
             internal static string InputvalueProductName = "//*[@class='yp-header-desktop']//*[@id='small-searchterms']";
             internal static string TotalListOfProducts = "//*[@class='category-products__main']//*[@class='category-products__total']";
+            internal static string InputvaluePriceFrom = "//*[@class='filter-range__from']";
+            internal static string InputvaluePriceTo = "//*[@class='filter-range__to']";
+            internal static string ClearThePriceFrom = "//*[@class='filter-range__from']";
+            internal static string ClearThePriceTo = "//*[@class='filter-range__to']";
         }
         internal static class Wishlist
         {
