@@ -106,5 +106,17 @@ namespace Framework.POM
 
             return texts;
         }
+
+        internal static void WaitForElementToBeInvisible(string locator)
+        {
+            WebDriverWait wait = new WebDriverWait(Driver.GetDriver(), TimeSpan.FromSeconds(10));
+            wait.Until(ExpectedConditions.InvisibilityOfElementLocated(By.XPath(locator)));
+        }
+
+        internal static void WaitForElementToBePresent(string locator)
+        {
+            WebDriverWait wait = new WebDriverWait(Driver.GetDriver(), TimeSpan.FromSeconds(10));
+            wait.Until(ExpectedConditions.PresenceOfAllElementsLocatedBy(By.XPath(locator)));
+        }
     }  
 }

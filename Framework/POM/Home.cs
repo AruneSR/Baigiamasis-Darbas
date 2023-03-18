@@ -1,6 +1,6 @@
 ﻿namespace Framework.POM
 {
-    internal class Home
+    public class Home
     {
         // The only way I've found to wait for the page to be loaded
         // This loading can be seen in the search page when prices are updated
@@ -27,6 +27,18 @@
                 currentTry++;
                 System.Threading.Thread.Sleep(100);
             }
+        }
+
+        public static void ClickCookiesAllaccept()
+        {
+            // Various waits are needed for tests to be stable
+            // In rare cases it would still fail, might need additional investigation of what else to wait for
+            Common.WaitForElementToBePresent(Locators.Home.ImagesLoading);
+            Common.WaitForElementToBePresent(Locators.Home.ImagesLoaded);
+            Common.WaitForElementToBePresent(Locators.Home.TagsCriteo);
+            Common.WaitForElementToBePresent(Locators.Home.IframeCriteo);
+            Common.ClickElement(Locators.Home.ButtonCookiesAllaccept);
+            Common.WaitForElementToBeInvisible(Locators.Home.ModalCookies);
         }
     }
 }

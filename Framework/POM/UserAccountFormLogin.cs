@@ -1,11 +1,4 @@
-﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Framework.POM
+﻿namespace Framework.POM
 {
     public class UserAccountFormLogin
     {
@@ -17,11 +10,13 @@ namespace Framework.POM
         public static void ClickButtonIconUser()
         {
             Common.ClickElement(Locators.UserAccountFormLogin.ButtonIconUser);
+            Common.WaitForElementToBeVisible(Locators.UserAccountFormLogin.InputEmail);
         }
 
         public static void ClickButtonLogin()
         {
             Common.ClickElement(Locators.UserAccountFormLogin.ButtonLogin);
+            Common.WaitForElementToBeVisible(Locators.UserAccountFormLogin.IconLogout);
         }
 
         public static void ClickButtonUserEmail()
@@ -34,11 +29,6 @@ namespace Framework.POM
             Common.ClickElement(Locators.UserAccountFormLogin.ButtonUserPassword);
         }
 
-        public static void ClickCookiesAllaccept()
-        {
-            Common.ClickElement(Locators.UserAccountFormLogin.ButtonCookiesAllaccept);
-        }
-
         public static void EnterValueUserEmail(string valueUserEmail)
         {
             Common.SendKeys(Locators.UserAccountFormLogin.InputEmail,valueUserEmail);  
@@ -46,9 +36,7 @@ namespace Framework.POM
 
         public static void EnterValueUserPassword(string valueUserPassword)
         {
-           
             Common.SendKeys(Locators.UserAccountFormLogin.InputPassword,valueUserPassword);
-            
         }
     }
 }

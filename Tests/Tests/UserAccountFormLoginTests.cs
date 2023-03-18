@@ -1,12 +1,5 @@
-﻿using Framework;
-using Framework.POM;
+﻿using Framework.POM;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.AccessControl;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Tests
 {
@@ -17,10 +10,9 @@ namespace Tests
         {
             string valueUserEmail = "missarune@gmail.com";
             string valueUserPassword = "Mumbo2023";
+            
             UserAccountFormLogin.ClickButtonIconUser();
-            UserAccountFormLogin.ClickButtonUserEmail();  
             UserAccountFormLogin.EnterValueUserEmail(valueUserEmail);  
-            UserAccountFormLogin.ClickButtonUserPassword();
             UserAccountFormLogin.EnterValueUserPassword(valueUserPassword);
             UserAccountFormLogin.ClickButtonLogin();
 

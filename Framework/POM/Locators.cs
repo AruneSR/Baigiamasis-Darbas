@@ -4,7 +4,13 @@
     {
         internal static class Home
         {
+            internal static string ImagesLoading = "//*[@class = 'lazy entered loading']";
+            internal static string ImagesLoaded = "//*[@class = 'lazy entered loaded']";
+            internal static string IframeCriteo = "//*[@title='Criteo DIS iframe']";
             internal static string DivsCriteo = "/html/body/div[@style='display: none;' and not(@class) and not(@id)]";
+            internal static string TagsCriteo = "//*[@id='criteo-tags-div']";
+            internal static string ModalCookies = "//*[@id='cookiebanner']";
+            internal static string ButtonCookiesAllaccept = "//*[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']";
         }
 
         internal static class UserAccountFormLogin
@@ -13,10 +19,10 @@
             internal static string ButtonLogin = "//*[@action='/loginform']//*[@type='submit']";
             internal static string ButtonFieldUserEmail = "//*[@id='Email']";
             internal static string ButtonUserPassword = "//*[@id='Password']";
-            internal static string ButtonCookiesAllaccept = "//*[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']";
             internal static string InputEmail = "//*[@id='Email']";
             internal static string InputPassword = "//*[@id='Password']";
             internal static string FieldLogOut = "//*[@class='top-bar__link top-bar__logout']";
+            internal static string IconLogout = "//*[@class='flaticon-log-out']";
         }
 
         internal static class Basket

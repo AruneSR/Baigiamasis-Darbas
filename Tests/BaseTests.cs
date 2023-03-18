@@ -17,7 +17,7 @@ namespace Tests
         {
             Driver.SetupDriver();
             Driver.OpenUrl("https://mumbo.lt/");
-            UserAccountFormLogin.ClickCookiesAllaccept();
+            Home.ClickCookiesAllaccept();
         }
 
         [TearDown]
