@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Framework.POM
+﻿namespace Framework.POM
 {
     public class UserAccountInfoChanges
     {
         public static void ClickAddNewPet()
         {
             Common.ClickElement(Locators.AddNewDogToMyPetsInfo.ButtonAddNewPet);
+            Common.WaitForElementToBeVisible(Locators.AddNewDogToMyPetsInfo.FormNewPet);
         }
 
         public static void CLickButtonToSave()

@@ -2,6 +2,14 @@
 {
     public class UserAccountFormLogin
     {
+        public static void Login(string email, string password)
+        {
+            ClickButtonIconUser();
+            EnterValueUserEmail(email);
+            EnterValueUserPassword(password);
+            ClickButtonLogin();
+        }
+
         public static bool CheckIfFieldLogOutIsVisible()
         {
             return Common.GetElementDisplayedStatus(Locators.UserAccountFormLogin.FieldLogOut);

@@ -67,6 +67,7 @@
             internal static string SelectYear = "//*[@name='Pet.DateOfBirthYear']";
             internal static string ButtonToSave = "//*[@class='form__controls']//*[@type='submit']";
             internal static string NotificationBar = "//*[@id='notificationBar']/div/div[2]";
+            internal static string FormNewPet = "//*[contains(@class,'form__new-pet')]";
         }
     }
 }
