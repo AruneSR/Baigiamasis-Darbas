@@ -1,11 +1,4 @@
-﻿using OpenQA.Selenium.Support.Extensions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Framework.POM
+﻿namespace Framework.POM
 {
     public class Basket
     {
@@ -13,6 +6,7 @@ namespace Framework.POM
         {
             Common.ClickElement(Locators.Basket.ButtonAddToCart);
         }
+
         public static void ClickDogIcon()
         {
             Common.ClickElement(Locators.Basket.ButtonDogIcon);
@@ -34,9 +28,5 @@ namespace Framework.POM
             return Common.GetElementText(Locators.Basket.NotificationBar);
         }
     }
-
-
-
-
 }
              

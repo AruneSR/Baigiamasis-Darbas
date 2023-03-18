@@ -11,11 +11,6 @@ namespace Framework.POM
 {
     public class Common
     {
-        public static void OpenUrl(string url)
-        {
-            Driver.GetDriver().Url = url;
-        }
-
         internal static IWebElement GetElement(string locator)
         {
             return Driver.GetDriver().FindElement(By.XPath(locator));
@@ -30,6 +25,7 @@ namespace Framework.POM
         {
             GetElement(locator).Click();
         }
+
         internal static void SendKeys(string locator, string keys)
         {
             Driver.GetDriver().FindElement(By.XPath(locator)).SendKeys(keys);
@@ -40,13 +36,6 @@ namespace Framework.POM
             IWebElement element = GetElement(locator);
             SelectElement selectElement = new SelectElement(element);
             selectElement.SelectByText(text);
-        }
-
-        internal static string GetSelectedOptionText(string locator)
-        {
-            IWebElement element = GetElement(locator);
-            SelectElement selectElement = new SelectElement(element);
-            return selectElement.SelectedOption.Text;
         }
 
         internal static string GetElementText(string locator)

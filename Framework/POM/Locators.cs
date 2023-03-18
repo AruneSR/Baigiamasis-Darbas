@@ -17,8 +17,6 @@
         { 
             internal static string ButtonIconUser  = "//*[@class='yp-header-desktop']//*[contains(@class,'user-controls__login')]";
             internal static string ButtonLogin = "//*[@action='/loginform']//*[@type='submit']";
-            internal static string ButtonFieldUserEmail = "//*[@id='Email']";
-            internal static string ButtonUserPassword = "//*[@id='Password']";
             internal static string InputEmail = "//*[@id='Email']";
             internal static string InputPassword = "//*[@id='Password']";
             internal static string FieldLogOut = "//*[@class='top-bar__link top-bar__logout']";
@@ -33,6 +31,7 @@
             internal static string NotificationBar = "//*[@class='notification__content']";
             internal static string ButtonFirstProduct = "//*[@class='product product-item product-item-1723']";
         }
+
         internal static class SearchFieldProduct
         {
             internal static string ButtonSearch = "//*[@class='yp-header-desktop']//*[@id='small-search-box-form']/button";
@@ -55,6 +54,7 @@
             internal static string MarkedHeartProducts = "//*[@class='wishlist-products']//*[@class='category-products__total']";
             internal static string OverlayAddingToWishlist = "//*[@class='overlay']";
         }
+
         internal static class AddNewDogToMyPetsInfo
         {
             internal static string ButtonAddNewPet = "//*[@class='account__content']//*[@type='button']";

@@ -27,16 +27,6 @@
             Common.WaitForElementToBeVisible(Locators.UserAccountFormLogin.IconLogout);
         }
 
-        public static void ClickButtonUserEmail()
-        {
-            Common.ClickElement(Locators.UserAccountFormLogin.ButtonFieldUserEmail);
-        }
-
-        public static void ClickButtonUserPassword()
-        {
-            Common.ClickElement(Locators.UserAccountFormLogin.ButtonUserPassword);
-        }
-
         public static void EnterValueUserEmail(string valueUserEmail)
         {
             Common.SendKeys(Locators.UserAccountFormLogin.InputEmail,valueUserEmail);  

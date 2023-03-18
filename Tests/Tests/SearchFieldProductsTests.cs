@@ -5,7 +5,6 @@ namespace Tests
 {
     internal class SearchFieldProductsTests : BaseTests 
     {
-
         [Test]
         public void SearchFieldProducts()
         {

@@ -22,6 +22,7 @@
         {
             Common.ClickElement(Locators.AddNewDogToMyPetsInfo.ButtonMyPets);
         }
+
         public static void EneterValuePetsBreed(string valuePetsBreed)
         {
             Common.SendKeys(Locators.AddNewDogToMyPetsInfo.InputPetsBreed,valuePetsBreed);
@@ -30,10 +31,6 @@
         public static void EnterValuePetsName(string valuePetsName)
         {
             Common.SendKeys(Locators.AddNewDogToMyPetsInfo.InputPetsName,valuePetsName);
-        }
-        public static string GetSelectOptionInPetsSpecies()
-        {
-            return Common.GetSelectedOptionText(Locators.AddNewDogToMyPetsInfo.SelectSpecies);
         }
 
         public static string NotificationSuccess()
@@ -45,6 +42,7 @@
         {
             Common.SelectOptionBytext(Locators.AddNewDogToMyPetsInfo.SelectDay, optionText);
         }
+
         public static void SelectOptionInBirthMonth(string optionText)
         {
             Common.SelectOptionBytext(Locators.AddNewDogToMyPetsInfo.SelectMonth, optionText);
