@@ -1,10 +1,4 @@
 ﻿using Framework.POM;
-using Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using NUnit.Framework;
 
 namespace Tests
@@ -16,21 +10,14 @@ namespace Tests
         {
             string valueUserEmail = "missarune@gmail.com";
             string valueUserPassword = "Mumbo2023";
-          
-            UserAccountFormLogin.ClickButtonIconUser();
-            UserAccountFormLogin.ClickButtonUserEmail();
-            UserAccountFormLogin.EnterValueUserEmail(valueUserEmail);
-            UserAccountFormLogin.ClickButtonUserPassword();
-            UserAccountFormLogin.EnterValueUserPassword(valueUserPassword);
-            UserAccountFormLogin.ClickButtonLogin();
+
+            UserAccountFormLogin.Login(valueUserEmail, valueUserPassword);
             Wishlist.ClickIconCat();
             Wishlist.ClickProductGuoliai();
             Wishlist.ClickIconHeart();
             Wishlist.ClickIconWishList();
 
             Assert.IsTrue(Wishlist.CheckIfMarkedHeartProductsCanFindOnWishlist());
-
         }
-
     }
 }

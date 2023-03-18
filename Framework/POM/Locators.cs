@@ -53,6 +53,7 @@
             internal static string ButtonIconWishlist = "//*[@class='yp-header-desktop']//*[contains(@class,'flaticon-love')]"; 
             internal static string ButtonProductGuoliai = "//*[@class='yp-header-desktop']//*[contains(@href,'/guoliai-guoliai-katems')]";
             internal static string MarkedHeartProducts = "//*[@class='wishlist-products']//*[@class='category-products__total']";
+            internal static string OverlayAddingToWishlist = "//*[@class='overlay']";
         }
         internal static class AddNewDogToMyPetsInfo
         {
