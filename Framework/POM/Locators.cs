@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Framework.POM
+﻿namespace Framework.POM
 {
     internal class Locators
     {
+        internal static class Home
+        {
+            internal static string DivsCriteo = "/html/body/div[@style='display: none;' and not(@class) and not(@id)]";
+        }
+
         internal static class UserAccountFormLogin
         { 
             internal static string ButtonIconUser  = "//*[@class='yp-header-desktop']//*[contains(@class,'user-controls__login')]";
@@ -37,7 +36,10 @@ namespace Framework.POM
             internal static string InputvaluePriceTo = "//*[@class='filter-range__to']";
             internal static string ClearThePriceFrom = "//*[@class='filter-range__from']";
             internal static string ClearThePriceTo = "//*[@class='filter-range__to']";
+            internal static string HeadingSearchResults = "//main[contains(@class,'search-page')]//h1";
+            internal static string SpanProductPrice = "//*[contains(@class,'product-item')]//*[@class='product__price--regular']";
         }
+
         internal static class Wishlist
         {
             internal static string ButtonIconCat = "//*[@class='yp-header-desktop']//*[contains(@class,'fal fa-cat')]";
@@ -60,7 +62,5 @@ namespace Framework.POM
             internal static string ButtonToSave = "//*[@class='form__controls']//*[@type='submit']";
             internal static string NotificationBar = "//*[@id='notificationBar']/div/div[2]";
         }
-        
     }
-
 }

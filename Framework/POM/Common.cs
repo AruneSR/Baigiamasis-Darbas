@@ -1,8 +1,11 @@
-﻿
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.Extensions;
 using OpenQA.Selenium.Support.UI;
+using SeleniumExtras.WaitHelpers;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Framework.POM
 {
@@ -10,33 +13,37 @@ namespace Framework.POM
     {
         public static void OpenUrl(string url)
         {
-            Driver.GetDriver().Url = "https://mumbo.lt/";
+            Driver.GetDriver().Url = url;
         }
+
         internal static IWebElement GetElement(string locator)
         {
-            System.Threading.Thread.Sleep(2000);
             return Driver.GetDriver().FindElement(By.XPath(locator));
         }
+
+        internal static List<IWebElement> GetElements(string locator)
+        {
+            return Driver.GetDriver().FindElements(By.XPath(locator)).ToList();
+        }
+
         internal static void ClickElement(string locator)
         {
-            System.Threading.Thread.Sleep(2000);
             GetElement(locator).Click();
         }
         internal static void SendKeys(string locator, string keys)
         {
-            System.Threading.Thread.Sleep(2000);
             Driver.GetDriver().FindElement(By.XPath(locator)).SendKeys(keys);
         }
+
         internal static void SelectOptionBytext (string locator, string text)
         {
-            System.Threading.Thread.Sleep(2000);
             IWebElement element = GetElement(locator);
             SelectElement selectElement = new SelectElement(element);
             selectElement.SelectByText(text);
         }
+
         internal static string GetSelectedOptionText(string locator)
         {
-            System.Threading.Thread.Sleep(2000);
             IWebElement element = GetElement(locator);
             SelectElement selectElement = new SelectElement(element);
             return selectElement.SelectedOption.Text;
@@ -44,31 +51,60 @@ namespace Framework.POM
 
         internal static string GetElementText(string locator)
         {
-            System.Threading.Thread.Sleep(2000);
             return GetElement(locator).Text;      
         }
        
         private static void ExecuteJavaScript(string script)
         {
-            System.Threading.Thread.Sleep(2000);
             Driver.GetDriver().ExecuteJavaScript(script);
         }
 
         public static void ScrollByPixels(int x, int y)
         {
-            System.Threading.Thread.Sleep(2000);
             ExecuteJavaScript($"window.scrollBy({x}, {y})");
         }
 
         internal static bool GetElementDisplayedStatus(string locator)
         {
-            System.Threading.Thread.Sleep(2000);
             return GetElement(locator).Displayed;
         }
 
-        internal static void GetElementClear(string locator)
+        internal static void WaitForElementToBeVisible(string locator)
         {
-            System.Threading.Thread.Sleep(2000);
-            GetElement(locator).Clear();
+            WebDriverWait wait = new WebDriverWait(Driver.GetDriver(), TimeSpan.FromSeconds(10));
+            wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(locator)));
         }
-    }  }
+
+        internal static int GetElementCount(string locator)
+        {
+            return GetElements(locator).Count;
+        }
+
+        internal static void ClearAndSendKeys(string locator, string keys)
+        {
+            Actions actions = new Actions(Driver.GetDriver());
+            IWebElement element = GetElement(locator);
+
+            actions.Click(element);
+            actions.KeyDown(Keys.Control);
+            actions.SendKeys("A");
+            actions.KeyUp(Keys.Control);
+            actions.SendKeys(element, keys);
+            actions.SendKeys(element, Keys.Enter);
+            actions.Perform();
+        }
+
+        internal static List<string> GetTextOfElements(string locator)
+        {
+            List<IWebElement> elements = GetElements(locator);
+            List<string> texts = new List<string>();
+
+            foreach (IWebElement element in elements)
+            {
+                texts.Add(element.Text);
+            }
+
+            return texts;
+        }
+    }  
+}
