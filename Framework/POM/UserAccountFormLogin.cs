@@ -1,14 +1,15 @@
-﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Framework.POM
+﻿namespace Framework.POM
 {
     public class UserAccountFormLogin
     {
+        public static void Login(string email, string password)
+        {
+            ClickButtonIconUser();
+            EnterValueUserEmail(email);
+            EnterValueUserPassword(password);
+            ClickButtonLogin();
+        }
+
         public static bool CheckIfFieldLogOutIsVisible()
         {
             return Common.GetElementDisplayedStatus(Locators.UserAccountFormLogin.FieldLogOut);
@@ -17,26 +18,13 @@ namespace Framework.POM
         public static void ClickButtonIconUser()
         {
             Common.ClickElement(Locators.UserAccountFormLogin.ButtonIconUser);
+            Common.WaitForElementToBeVisible(Locators.UserAccountFormLogin.InputEmail);
         }
 
         public static void ClickButtonLogin()
         {
             Common.ClickElement(Locators.UserAccountFormLogin.ButtonLogin);
-        }
-
-        public static void ClickButtonUserEmail()
-        {
-            Common.ClickElement(Locators.UserAccountFormLogin.ButtonFieldUserEmail);
-        }
-
-        public static void ClickButtonUserPassword()
-        {
-            Common.ClickElement(Locators.UserAccountFormLogin.ButtonUserPassword);
-        }
-
-        public static void ClickCookiesAllaccept()
-        {
-            Common.ClickElement(Locators.UserAccountFormLogin.ButtonCookiesAllaccept);
+            Common.WaitForElementToBeVisible(Locators.UserAccountFormLogin.IconLogout);
         }
 
         public static void EnterValueUserEmail(string valueUserEmail)
@@ -46,9 +34,7 @@ namespace Framework.POM
 
         public static void EnterValueUserPassword(string valueUserPassword)
         {
-           
             Common.SendKeys(Locators.UserAccountFormLogin.InputPassword,valueUserPassword);
-            
         }
     }
 }

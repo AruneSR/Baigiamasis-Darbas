@@ -1,23 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Framework.POM
+﻿namespace Framework.POM
 {
     internal class Locators
     {
+        internal static class Home
+        {
+            internal static string ImagesLoading = "//*[@class = 'lazy entered loading']";
+            internal static string ImagesLoaded = "//*[@class = 'lazy entered loaded']";
+            internal static string IframeCriteo = "//*[@title='Criteo DIS iframe']";
+            internal static string DivsCriteo = "/html/body/div[@style='display: none;' and not(@class) and not(@id)]";
+            internal static string TagsCriteo = "//*[@id='criteo-tags-div']";
+            internal static string ModalCookies = "//*[@id='cookiebanner']";
+            internal static string ButtonCookiesAllaccept = "//*[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']";
+        }
+
         internal static class UserAccountFormLogin
         { 
             internal static string ButtonIconUser  = "//*[@class='yp-header-desktop']//*[contains(@class,'user-controls__login')]";
             internal static string ButtonLogin = "//*[@action='/loginform']//*[@type='submit']";
-            internal static string ButtonFieldUserEmail = "//*[@id='Email']";
-            internal static string ButtonUserPassword = "//*[@id='Password']";
-            internal static string ButtonCookiesAllaccept = "//*[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']";
             internal static string InputEmail = "//*[@id='Email']";
             internal static string InputPassword = "//*[@id='Password']";
             internal static string FieldLogOut = "//*[@class='top-bar__link top-bar__logout']";
+            internal static string IconLogout = "//*[@class='flaticon-log-out']";
         }
 
         internal static class Basket
@@ -26,8 +29,11 @@ namespace Framework.POM
             internal static string ButtonDogIcon = "//*[@class='yp-header-desktop']//*[contains(@class,'fal fa-dog')]";
             internal static string ButtonProductGertuves = "//*[@class='yp-header-desktop']//*[contains(@href,'/gertuves-sunims')]";
             internal static string NotificationBar = "//*[@class='notification__content']";
-            internal static string ButtonFirstProduct = "//*[@class='product product-item product-item-1723']";
+            internal static string ButtonFirstProduct = "//*[contains(@class,'product-item')]";
+            internal static string HeadingProductTitle = "//*[@class='single-product__right']//*[@class='single-product__title']";
+            internal static string OverlayLoading = "//*[@class='overlay']";
         }
+
         internal static class SearchFieldProduct
         {
             internal static string ButtonSearch = "//*[@class='yp-header-desktop']//*[@id='small-search-box-form']/button";
@@ -37,7 +43,10 @@ namespace Framework.POM
             internal static string InputvaluePriceTo = "//*[@class='filter-range__to']";
             internal static string ClearThePriceFrom = "//*[@class='filter-range__from']";
             internal static string ClearThePriceTo = "//*[@class='filter-range__to']";
+            internal static string HeadingSearchResults = "//main[contains(@class,'search-page')]//h1";
+            internal static string SpanProductPrice = "//*[contains(@class,'product-item')]//*[@class='product__price--regular']";
         }
+
         internal static class Wishlist
         {
             internal static string ButtonIconCat = "//*[@class='yp-header-desktop']//*[contains(@class,'fal fa-cat')]";
@@ -45,7 +54,9 @@ namespace Framework.POM
             internal static string ButtonIconWishlist = "//*[@class='yp-header-desktop']//*[contains(@class,'flaticon-love')]"; 
             internal static string ButtonProductGuoliai = "//*[@class='yp-header-desktop']//*[contains(@href,'/guoliai-guoliai-katems')]";
             internal static string MarkedHeartProducts = "//*[@class='wishlist-products']//*[@class='category-products__total']";
+            internal static string OverlayAddingToWishlist = "//*[@class='overlay']";
         }
+
         internal static class AddNewDogToMyPetsInfo
         {
             internal static string ButtonAddNewPet = "//*[@class='account__content']//*[@type='button']";
@@ -59,8 +70,7 @@ namespace Framework.POM
             internal static string SelectYear = "//*[@name='Pet.DateOfBirthYear']";
             internal static string ButtonToSave = "//*[@class='form__controls']//*[@type='submit']";
             internal static string NotificationBar = "//*[@id='notificationBar']/div/div[2]";
+            internal static string FormNewPet = "//*[contains(@class,'form__new-pet')]";
         }
-        
     }
-
 }

@@ -1,32 +1,23 @@
 ﻿using Framework.POM;
-using Framework;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Tests
 {
     internal class SearchFieldProductsTests : BaseTests 
     {
-
         [Test]
         public void SearchFieldProducts()
         {
             string valueinputSearch = "pavadeliai";
-            string valueinputPriceFrom = "1";
-            string valueinputPriceTo = "50";
+            int valueinputPriceFrom = 20;
+            int valueinputPriceTo = 30;
             
-            SearchFieldProduct.EntervalidProductNameInSearchField(valueinputSearch);
+            SearchFieldProduct.EnterProductName(valueinputSearch);
             SearchFieldProduct.ClickButtonSearch();
-            SearchFieldProduct.ClearTheTextBoxFrom();
             SearchFieldProduct.EnterPriceFrom(valueinputPriceFrom);
-            SearchFieldProduct.ClearTheTextBoxTo();
             SearchFieldProduct.EnterPriceTo(valueinputPriceTo);
 
-            Assert.IsTrue(SearchFieldProduct.CheckIfappearsTotalListOfProducts());
+            Assert.IsTrue(SearchFieldProduct.AllProductPricesAreInRange(1, 50));
         }
     }
 }

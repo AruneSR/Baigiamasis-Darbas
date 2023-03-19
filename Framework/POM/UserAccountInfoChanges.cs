@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Framework.POM
+﻿namespace Framework.POM
 {
     public class UserAccountInfoChanges
     {
         public static void ClickAddNewPet()
         {
             Common.ClickElement(Locators.AddNewDogToMyPetsInfo.ButtonAddNewPet);
+            Common.WaitForElementToBeVisible(Locators.AddNewDogToMyPetsInfo.FormNewPet);
         }
 
         public static void CLickButtonToSave()
@@ -27,6 +22,7 @@ namespace Framework.POM
         {
             Common.ClickElement(Locators.AddNewDogToMyPetsInfo.ButtonMyPets);
         }
+
         public static void EneterValuePetsBreed(string valuePetsBreed)
         {
             Common.SendKeys(Locators.AddNewDogToMyPetsInfo.InputPetsBreed,valuePetsBreed);
@@ -35,10 +31,6 @@ namespace Framework.POM
         public static void EnterValuePetsName(string valuePetsName)
         {
             Common.SendKeys(Locators.AddNewDogToMyPetsInfo.InputPetsName,valuePetsName);
-        }
-        public static string GetSelectOptionInPetsSpecies()
-        {
-            return Common.GetSelectedOptionText(Locators.AddNewDogToMyPetsInfo.SelectSpecies);
         }
 
         public static string NotificationSuccess()
@@ -50,6 +42,7 @@ namespace Framework.POM
         {
             Common.SelectOptionBytext(Locators.AddNewDogToMyPetsInfo.SelectDay, optionText);
         }
+
         public static void SelectOptionInBirthMonth(string optionText)
         {
             Common.SelectOptionBytext(Locators.AddNewDogToMyPetsInfo.SelectMonth, optionText);

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Framework.POM
+﻿namespace Framework.POM
 {
     public class Wishlist
     {
@@ -12,6 +6,7 @@ namespace Framework.POM
         {
             return Common.GetElementDisplayedStatus(Locators.Wishlist.MarkedHeartProducts);
         }
+
         public static void ClickIconCat()
         { 
             Common.ClickElement(Locators.Wishlist.ButtonIconCat);
@@ -20,11 +15,14 @@ namespace Framework.POM
         public static void ClickIconHeart()
         { 
             Common.ClickElement(Locators.Wishlist.ButtonIconHeart);
+            Common.WaitForElementToBeInvisible(Locators.Wishlist.OverlayAddingToWishlist);
         }
+
         public static void ClickIconWishList()
         {
             Common.ClickElement(Locators.Wishlist.ButtonIconWishlist);
         }
+
         public static void ClickProductGuoliai()
         {
             Common.ClickElement(Locators.Wishlist.ButtonProductGuoliai);

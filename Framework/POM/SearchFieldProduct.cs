@@ -1,48 +1,57 @@
 ﻿using System;
-using System.CodeDom;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Framework.POM
 {
     public class SearchFieldProduct
     {
-        public static bool CheckIfappearsTotalListOfProducts()
+        public static bool AllProductPricesAreInRange(int priceFrom, int priceTo)
         {
-            return Common.GetElementDisplayedStatus(Locators.SearchFieldProduct.TotalListOfProducts);
-        }
+            // Get prices of all products
+            List<string> pricesText = Common.GetTextOfElements(Locators.SearchFieldProduct.SpanProductPrice);
+            List<double> pricesDouble = new List<double>();
 
-        public static void ClearTheTextBoxFrom()
-        {
-            Common.GetElementClear(Locators.SearchFieldProduct.ClearThePriceFrom);
-        }
+            // Convert prices from text to number value
+            for (int i = 0; i < pricesText.Count; i++)
+            {
+                string priceWithoutEuroSymbol = pricesText[i].Substring(0, 4);
+                string priceWithDot = priceWithoutEuroSymbol.Replace(",", ".");
+                pricesDouble.Add(Convert.ToDouble(priceWithDot));
+            }
 
-        public static void ClearTheTextBoxTo()
-        {
-            Common.GetElementClear(Locators.SearchFieldProduct.ClearThePriceTo);
+            // Check each price if it is in the specified range
+            foreach (double price in pricesDouble)
+            {
+                if (price < priceFrom || price > priceTo)
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
 
         public static void ClickButtonSearch()
         {
             Common.ClickElement(Locators.SearchFieldProduct.ButtonSearch);
+            Common.WaitForElementToBeVisible(Locators.SearchFieldProduct.HeadingSearchResults);
         }
 
-        public static void EnterPriceFrom(string valueinputPriceFrom)
+        public static void EnterPriceFrom(int price)
         {
-            Common.SendKeys(Locators.SearchFieldProduct.InputvaluePriceFrom, valueinputPriceFrom);
+            Common.ClearAndSendKeys(Locators.SearchFieldProduct.InputvaluePriceFrom, price.ToString());
+            Home.WaitForPageToFinishLoading();
         }
 
-        public static void EnterPriceTo(string valueinputPriceTo)
+        public static void EnterPriceTo(int price)
         {
-            Common.SendKeys(Locators.SearchFieldProduct.InputvaluePriceTo, valueinputPriceTo);
+            Common.ClearAndSendKeys(Locators.SearchFieldProduct.InputvaluePriceTo, price.ToString());
+            Home.WaitForPageToFinishLoading();
         }
 
-        public static void EntervalidProductNameInSearchField(string valueinputSearch)
+        public static void EnterProductName(string product)
         {
-            Common.SendKeys(Locators.SearchFieldProduct.InputvalueProductName,valueinputSearch);
+            Common.SendKeys(Locators.SearchFieldProduct.InputvalueProductName, product);
         }            
     }
-
 }

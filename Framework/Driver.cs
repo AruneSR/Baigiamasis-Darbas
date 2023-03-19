@@ -1,25 +1,16 @@
 ﻿using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Collections;
-using System.Threading;
 
 namespace Framework
 {
     public class Driver
     {
-        public static IWebDriver driver;
+        private static IWebDriver driver;
      
-       
         public static void SetupDriver()
         {
             driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
-            
         }
 
         internal static IWebDriver GetDriver()
@@ -32,13 +23,10 @@ namespace Framework
             driver.Url = url;
             
         }
+
         public static void QuitDriver()
         {
             driver.Quit();
         }
-
-      
-       
-
     }
 }

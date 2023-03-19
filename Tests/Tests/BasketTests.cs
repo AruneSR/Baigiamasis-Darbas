@@ -1,10 +1,5 @@
 ﻿using Framework.POM;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Tests
 {
@@ -17,7 +12,6 @@ namespace Tests
 
             Basket.ClickDogIcon();
             Basket.ClickProductGertuves();
-            Common.ScrollByPixels(0, 400);
             Basket.ClicFirstProductFromList();
             Basket.ClickAddToCart();
 
