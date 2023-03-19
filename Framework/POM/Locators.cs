@@ -29,7 +29,9 @@
             internal static string ButtonDogIcon = "//*[@class='yp-header-desktop']//*[contains(@class,'fal fa-dog')]";
             internal static string ButtonProductGertuves = "//*[@class='yp-header-desktop']//*[contains(@href,'/gertuves-sunims')]";
             internal static string NotificationBar = "//*[@class='notification__content']";
-            internal static string ButtonFirstProduct = "//*[@class='product product-item product-item-1723']";
+            internal static string ButtonFirstProduct = "//*[contains(@class,'product-item')]";
+            internal static string HeadingProductTitle = "//*[@class='single-product__right']//*[@class='single-product__title']";
+            internal static string OverlayLoading = "//*[@class='overlay']";
         }
 
         internal static class SearchFieldProduct

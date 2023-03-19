@@ -5,6 +5,7 @@
         public static void ClickAddToCart()
         {
             Common.ClickElement(Locators.Basket.ButtonAddToCart);
+            Common.WaitForElementToBeInvisible(Locators.Basket.OverlayLoading);
         }
 
         public static void ClickDogIcon()
@@ -14,8 +15,9 @@
 
         public static void ClicFirstProductFromList()
         {
-
             Common.ClickElement(Locators.Basket.ButtonFirstProduct);
+            Common.WaitForElementToBeVisible(Locators.Basket.HeadingProductTitle);
+            Common.WaitForElementToBeInvisible(Locators.Basket.OverlayLoading);
         }
 
         public static void ClickProductGertuves()
